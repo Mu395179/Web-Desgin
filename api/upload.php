@@ -13,6 +13,7 @@ if(!empty($_FILES)){
             'name' => $newFileName,
             'type' => $_FILES['file']['type'],
             'size' => $_FILES['file']['size'],
+            'class' => 'title',
         ];
         $old = q("SELECT * FROM `images`");
         foreach($old as $key => $value){

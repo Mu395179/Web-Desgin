@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-12 17:48:07
+-- 產生時間： 2024-07-13 15:59:31
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -31,15 +31,16 @@ CREATE TABLE `images` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `type` text NOT NULL,
-  `size` text NOT NULL
+  `size` text NOT NULL,
+  `class` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `images`
 --
 
-INSERT INTO `images` (`id`, `name`, `type`, `size`) VALUES
-(1, '20240712174443.jpg', 'image/jpeg', '2554753');
+INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
+(10, '20240713155858.jpg', 'image/jpeg', '22218', 'title');
 
 -- --------------------------------------------------------
 
@@ -49,15 +50,17 @@ INSERT INTO `images` (`id`, `name`, `type`, `size`) VALUES
 
 CREATE TABLE `titles` (
   `id` int(11) NOT NULL,
-  `text` text NOT NULL
+  `subtitle` text NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- 傾印資料表的資料 `titles`
 --
 
-INSERT INTO `titles` (`id`, `text`) VALUES
-(1, '5564');
+INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
+(13, '123', '123', '123');
 
 --
 -- 已傾印資料表的索引
@@ -83,13 +86,13 @@ ALTER TABLE `titles`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
