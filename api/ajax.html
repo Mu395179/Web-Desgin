@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="../css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<section class="home section" id="home">
+    <img src="https://picsum.photos/600/400/?random=23" alt="home image" class="home__bg">
+    <div class="home__shadow"></div>
+
+    <div class="home__container container grid">
+
+    </div>
+
+</section>
+
+<script>
+    $(document).ready(function () {
+        // 這個函數會在DOM完全載入後執行
+
+        // 綁定按鈕的點擊事件
+
+        const home__containery = $('.home__container');
+        // 防止默認的鏈接行為
+        // 這行應該放在一個事件處理器內，這裡暫時不需要
+        let url = './get_data.php';
+
+        // 使用$.ajax進行GET請求
+        $.ajax({
+            type: "get",
+            url: url,
+            data: "data",
+            dataType: "json",
+            success: function (data) {
+                // 請求成功時執行的操作
+                console.log('Success:', data);
+                // 這裡應該是 data 而不是 res
+                let result = '';
+                $.each(data, function (key, value) {
+                    console.log('value', value);
+                    result += `
+                           <div class="home__data">
+            <h3 class="home__subtitle">
+                ${value.subtitle}
+            </h3>
+            <h1 class="home__title">
+                ${value.title}
+            </h1>
+            <p class="home__description">
+                 ${value.description}
+            </p>
+          
+        </div>
+                        `;
+                });
+                console.log('result', result);
+                home__containery.html(result);
+
+            },
+            error: function (error) {
+                // 請求失敗時執行的操作
+                console.error('Error:', error);
+            }
+        });
+    });
+</script>
