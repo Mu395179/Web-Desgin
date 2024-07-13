@@ -1,13 +1,7 @@
 <?php include_once "base.php";
 
 if(!empty($_FILES)){
-    dd($_FILES);
-    if(!empty($_POST)){
-        dd($_POST);
-    }else{
-        echo "上傳失敗"; 
-        exit;
-    }
+
     // 初始化日期
     $date = new DateTime();
      // 提取副檔名
@@ -20,12 +14,14 @@ if(!empty($_FILES)){
             'type' => $_FILES['file']['type'],
             'size' => $_FILES['file']['size'],
         ];
+        $old = q("SELECT * FROM `images`");
+        foreach($old as $key => $value){
+            unlink('images/' .$value['name']);
+            $Images->del($value['id']);
+            
+        }
         $Images->save($data);
 
-        $text = [
-            'text' =>$_POST['description']
-        ];
-        $Title->save($text);
     }
 }else{
     echo "上傳失敗";
