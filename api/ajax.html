@@ -5,8 +5,12 @@
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
 <section class="home section" id="home">
-    <img src="https://picsum.photos/600/400/?random=23" alt="home image" class="home__bg">
+    <div class="home__data">
+        
+    </div>
     <div class="home__shadow"></div>
 
     <div class="home__container container grid">
@@ -16,12 +20,45 @@
 </section>
 
 <script>
+
+
+
+
+
+
     $(document).ready(function () {
         // 這個函數會在DOM完全載入後執行
 
         // 綁定按鈕的點擊事件
-
+        const home__data = $('.home__data');
         const home__containery = $('.home__container');
+        let url1 = './get_image.php';
+
+        $.ajax({
+            type: "get",
+            url: url1,
+            data: "image",
+            dataType: "json",
+            success: function (image) {
+                // 請求成功時執行的操作
+                console.log('Success:', image);
+                let result = '';
+                $.each(image, function (key, value) {
+                    console.log('value', value);
+                    result += `
+                        <img src="./images/${value.name}" alt="home image" class="home__bg">
+                    `;
+                });
+                console.log('result', result);
+                home__data.html(result); // 這裡應該使用 .html() 函數
+            },
+            error: function (error) {
+                // 請求失敗時執行的操作
+                console.error('Error:', error);
+            }
+        });
+
+
         // 防止默認的鏈接行為
         // 這行應該放在一個事件處理器內，這裡暫時不需要
         let url = './get_data.php';
