@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-13 15:59:31
+-- 產生時間： 2024-07-14 17:40:04
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -40,7 +40,11 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
-(10, '20240713155858.jpg', 'image/jpeg', '22218', 'title');
+(29, '20240714170140.jpg', 'image/jpeg', '1027467', 'image1'),
+(30, '20240714170148.jpg', 'image/jpeg', '2026343', 'image2'),
+(31, '20240714170156.jpg', 'image/jpeg', '377159', 'image3'),
+(34, '20240714170316.jpg', 'image/jpeg', '2047289', 'image4'),
+(35, '20240714170326.jpg', 'image/jpeg', '628927', 'title');
 
 -- --------------------------------------------------------
 
@@ -60,7 +64,7 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
-(13, '123', '123', '123');
+(20, 'HOLOLIVE EN', 'MYTH FOREVER', 'WE LOVE HOLOLIVE');
 
 --
 -- 已傾印資料表的索引
@@ -86,13 +90,13 @@ ALTER TABLE `titles`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
