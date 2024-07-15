@@ -6,7 +6,7 @@ $(document).ready(function () {
     // 綁定按鈕的點擊事件
     const home_img = $('.home_img');
     const home__data = $('.home__data');
-    let gettitleimage = '../home_api/get_title_image.php';
+    let gettitleimage = '../api_home/get_title_image.php';
 
     $.ajax({
         type: "get",
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
     // 防止默認的鏈接行為
     // 這行應該放在一個事件處理器內，這裡暫時不需要
-    let url = '../home_api/get_data.php';
+    let url = '../api_home/get_data.php';
 
     // 使用$.ajax進行GET請求
     $.ajax({
@@ -82,7 +82,7 @@ $(document).ready(function () {
         }
     });
 
-    let gethomeimage = '../home_api/get_home_image.php';
+    let gethomeimage = '../api_home/get_home_image.php';
 
     $.ajax({
         type: "get",
@@ -106,7 +106,7 @@ $(document).ready(function () {
         }
     });
 
-    let gethomeimagename = '../home_api/get_home_image_name.php';
+    let gethomeimagename = '../api_home/get_home_image_name.php';
 
     $(document).ready(function() {
         $.ajax({

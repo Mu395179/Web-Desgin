@@ -28,7 +28,7 @@
             description: $("#description").val(),
             
         }
-        $.post("../home_api/edit_data.php", form, function(res) {
+        $.post("../api_home/edit_data.php", form, function(res) {
             if (res == 1) {
                 alert('新增成功');
                 window.location.href = "../backend/manage.html";
