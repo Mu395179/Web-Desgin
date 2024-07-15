@@ -106,6 +106,31 @@ $(document).ready(function () {
         }
     });
 
+    let gethomeimagename = '../api/get_home_image_name.php';
+
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: gethomeimagename,
+            dataType: "json",
+            success: function(imagename) {
+                // 请求成功时执行的操作
+                console.log('Success:', imagename);
+
+                $('#home_image1_name').text(imagename.image1);
+                $('#home_image2_name').text(imagename.image2);
+                $('#home_image3_name').text(imagename.image3);
+                $('#home_image4_name').text(imagename.image4);
+            },
+            error: function(error) {
+                // 请求失败时执行的操作
+                console.error('Error:', error);
+                console.error('imagename:', imagename);
+            }
+        });
+    });
+
+
 
 
 });

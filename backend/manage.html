@@ -73,7 +73,7 @@
                 <div class="home__cards grid">
                     <article class="home__card">
                         <img src="" alt="home image" class="home__card-img" id="home_image1" >
-                        <h3 class="home__card-title">image1</h3>
+                        <h3 class="home__card-title" id="home_image1_name">image1</h3>
                       
                         <div class="home__card-shadow"></div>
                        
@@ -81,7 +81,7 @@
 
                     <article class="home__card">
                         <img src="" alt="home image" class="home__card-img" id="home_image2">
-                        <h3 class="home__card-title">image2</h3>
+                        <h3 class="home__card-title" id="home_image2_name">image2</h3>
                        
                         <div class="home__card-shadow"></div>
                        
@@ -89,7 +89,7 @@
 
                     <article class="home__card">
                         <img src="" alt="home image" class="home__card-img" id="home_image3">
-                        <h3 class="home__card-title">image3</h3>
+                        <h3 class="home__card-title" id="home_image3_name">image3</h3>
                        
                         <div class="home__card-shadow"></div>
                         
@@ -97,7 +97,7 @@
 
                     <article class="home__card">
                         <img src="" alt="home image" class="home__card-img" id="home_image4">
-                        <h3 class="home__card-title">image4</h3>
+                        <h3 class="home__card-title" id="home_image4_name">image4</h3>
                       
                         <div class="home__card-shadow"></div>
                       
@@ -105,37 +105,53 @@
                     </article>
                     
                 </div>
-                <div class="home__cards grid">
+                <div class="home__cards grid" style="display: flex; justify-content: space-around;">
                     <article class="home__card">
                        
-                        <a href="../form/image_form.php?class=image1" class="button" >
+                        <a href="../form/image_form.php?class=image1" class="button" style="column-gap: 0">
                             更換照片<i class="ri-arrow-right-line"></i>
+                        </a>
+                        <a href="../form/name_home_image_form.php?type=image1" class="button" style="column-gap: 0">
+                            編輯照片名稱
+                        </a>
+                        
+                    </article>
+
+                    <article class="home__card">
+                       
+                        <a href="../form/image_form.php?class=image2" class="button" style="column-gap: 0">
+                            更換照片
+                        </a>
+                        <a href="../form/name_home_image_form.php?type=image2" class="button" style="column-gap: 0">
+                            編輯照片名稱
+                        </a>
+                        
+                       
+                    </article>
+
+                    <article class="home__card">
+                       
+                        <a href="../form/image_form.php?class=image3" class="button" style="column-gap: 0">
+                            更換照片<i class="ri-arrow-right-line"></i>
+                        </a>
+                        <a href="../form/name_home_image_form.php?type=image3" class="button" style="column-gap: 0">
+                            編輯照片名稱
                         </a>
                     </article>
 
                     <article class="home__card">
                        
-                        <a href="../form/image_form.php?class=image2" class="button" >
+                        <a href="../form/image_form.php?class=image4" class="button" style="column-gap: 0">
                             更換照片<i class="ri-arrow-right-line"></i>
                         </a>
-                    </article>
-
-                    <article class="home__card">
-                       
-                        <a href="../form/image_form.php?class=image3" class="button" >
-                            更換照片<i class="ri-arrow-right-line"></i>
-                        </a>
-                    </article>
-
-                    <article class="home__card">
-                       
-                        <a href="../form/image_form.php?class=image4" class="button" >
-                            更換照片<i class="ri-arrow-right-line"></i>
+                        <a href="../form/name_home_image_form.php?type=image4" class="button" style="column-gap: 0">
+                            編輯照片名稱
                         </a>
                         
                     </article>
                     
                 </div>
+                
             </div>
         </section>
 
