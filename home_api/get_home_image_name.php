@@ -1,5 +1,5 @@
 <?php
-include_once "base.php";
+include_once "../api/base.php";
 
 $data = [
     q("SELECT * FROM `name_home_image` WHERE `type`='image1'"),
