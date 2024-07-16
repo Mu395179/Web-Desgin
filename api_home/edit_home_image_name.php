@@ -1,9 +1,7 @@
 <?php
 include_once "../api/base.php";
 
-$type = $_POST['type'];
-
-$datas = q("SELECT * FROM `name_home_image` WHERE `type`='$type'");
+$datas = q("SELECT * FROM `name_home_image` WHERE `type`='image1'");
 
 if(isset($datas)){
 foreach($datas as $key => $value){

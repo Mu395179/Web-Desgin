@@ -135,4 +135,5 @@ function dd($array)
 $Title = new DB('titles');
 $Images = new DB('images');
 $Name_home_image = new DB('name_home_image');
+$Text_about = new DB('text_about');
 
