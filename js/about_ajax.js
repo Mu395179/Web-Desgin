@@ -21,6 +21,7 @@ $(document).ready(function () {
                 console.log('value', value);
                 result += `
                     <img src="../api/images/${value.name}" alt="about image" class="about__bg">
+                    <div class="about__shadow"></div>
                 `;
             });
             console.log('result', result);
