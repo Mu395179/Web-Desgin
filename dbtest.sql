@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-15 16:15:49
+-- 產生時間： 2024-07-17 14:07:44
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -63,11 +63,30 @@ CREATE TABLE `name_home_image` (
 --
 
 INSERT INTO `name_home_image` (`id`, `name`, `type`) VALUES
-(12, 'Suisei', 'image2'),
 (13, 'IryS', 'image3'),
 (14, 'Koseki Bijou', 'image4'),
-(21, 'ffsdfsdf', 'image4'),
-(22, 'Gawr Gura', 'image1');
+(31, 'suisei', 'image2'),
+(32, 'Gawr Gura', 'image1');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `text_about`
+--
+
+CREATE TABLE `text_about` (
+  `id` int(11) NOT NULL,
+  `subtitle` text NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `text_about`
+--
+
+INSERT INTO `text_about` (`id`, `subtitle`, `title`, `description`) VALUES
+(5, '更換測試', '更換成功', 'yoyoyooyoy');
 
 -- --------------------------------------------------------
 
@@ -87,7 +106,7 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
-(24, 'Hololive', 'HOLO-EN', 'HOLO AMAZING');
+(27, 'HOLOLIVE EN', 'HOLOLIVE MATH', 'HOLOLIVE EN AMEZING');
 
 --
 -- 已傾印資料表的索引
@@ -103,6 +122,12 @@ ALTER TABLE `images`
 -- 資料表索引 `name_home_image`
 --
 ALTER TABLE `name_home_image`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- 資料表索引 `text_about`
+--
+ALTER TABLE `text_about`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -125,13 +150,19 @@ ALTER TABLE `images`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `name_home_image`
 --
 ALTER TABLE `name_home_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `text_about`
+--
+ALTER TABLE `text_about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
