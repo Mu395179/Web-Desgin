@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-17 15:32:38
+-- 產生時間： 2024-07-17 17:21:40
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -130,9 +130,15 @@ INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
 
 CREATE TABLE `title_popular` (
   `id` int(11) NOT NULL,
-  `subtitle` text NOT NULL,
   `title` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `title_popular`
+--
+
+INSERT INTO `title_popular` (`id`, `title`) VALUES
+(2, 'add title');
 
 --
 -- 已傾印資料表的索引
@@ -169,6 +175,12 @@ ALTER TABLE `titles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `title_popular`
+--
+ALTER TABLE `title_popular`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
 
@@ -201,6 +213,12 @@ ALTER TABLE `text_popular`
 --
 ALTER TABLE `titles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `title_popular`
+--
+ALTER TABLE `title_popular`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
