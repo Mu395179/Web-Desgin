@@ -1,13 +1,13 @@
 <?php
 include_once "../api/base.php";
 
-$datas = q("SELECT * FROM `text_about`");
+$datas = q("SELECT * FROM `Title_popular`");
 foreach($datas as $key => $value){
-    $Text_about->del($value['id']);
+    $Title_popular->del($value['id']);
 }
 
 
-echo $Text_about->save($_POST);
+echo $Title_popular->save($_POST);
 
 
 
