@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-17 14:07:44
+-- 產生時間： 2024-07-17 15:32:38
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -44,7 +44,8 @@ INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
 (46, '20240715140103.jpg', 'image/jpeg', '377159', 'image3'),
 (53, '20240715161415.jpg', 'image/jpeg', '1027467', 'image1'),
 (54, '20240715161423.jpg', 'image/jpeg', '2047289', 'image4'),
-(55, '20240715161521.jpg', 'image/jpeg', '628927', 'title');
+(55, '20240715161521.jpg', 'image/jpeg', '628927', 'title'),
+(56, '20240717142534.jpg', 'image/jpeg', '1886371', 'about');
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,20 @@ CREATE TABLE `text_about` (
 --
 
 INSERT INTO `text_about` (`id`, `subtitle`, `title`, `description`) VALUES
-(5, '更換測試', '更換成功', 'yoyoyooyoy');
+(6, 'Astronaut Ame', 'Holive EN Myth Watson Amelia', 'Astronaut Watson Amelia is the first VTuber to travel through space.');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `text_popular`
+--
+
+CREATE TABLE `text_popular` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `text` text NOT NULL,
+  `type` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -107,6 +121,18 @@ CREATE TABLE `titles` (
 
 INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
 (27, 'HOLOLIVE EN', 'HOLOLIVE MATH', 'HOLOLIVE EN AMEZING');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `title_popular`
+--
+
+CREATE TABLE `title_popular` (
+  `id` int(11) NOT NULL,
+  `subtitle` text NOT NULL,
+  `title` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 已傾印資料表的索引
@@ -131,6 +157,12 @@ ALTER TABLE `text_about`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `text_popular`
+--
+ALTER TABLE `text_popular`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `titles`
 --
 ALTER TABLE `titles`
@@ -144,7 +176,7 @@ ALTER TABLE `titles`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `name_home_image`
@@ -156,7 +188,13 @@ ALTER TABLE `name_home_image`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `text_about`
 --
 ALTER TABLE `text_about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `text_popular`
+--
+ALTER TABLE `text_popular`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
