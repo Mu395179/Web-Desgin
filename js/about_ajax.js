@@ -6,11 +6,11 @@ $(document).ready(function () {
     // 綁定按鈕的點擊事件
     const about__image = $('.about__image');
     const about__data = $('.about__data');
-    let gettitleimage = '../api_about/get_title_image.php';
+    let getaboutimage = '../api_about/get_image.php';
 
     $.ajax({
         type: "get",
-        url: gettitleimage,
+        url: getaboutimage,
         data: "image",
         dataType: "json",
         success: function (image) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
                 `;
             });
             console.log('result', result);
-            about_img.html(result); // 這裡應該使用 .html() 函數
+            about__image.html(result); // 這裡應該使用 .html() 函數
         },
         error: function (error) {
             // 請求失敗時執行的操作
@@ -64,7 +64,7 @@ $(document).ready(function () {
                         ${value.description}
                     </p>
                 </div>
-          <a href="../form/image_form.php?class=title" class="button">
+          <a href="../form/image_form.php?class=about" class="button">
                         更換照片<i class="ri-arrow-right-line"></i>
                     </a>
           <a href="../form_about/text_form.php" class="button">
