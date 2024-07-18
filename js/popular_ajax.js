@@ -47,27 +47,32 @@ $(document).ready(function () {
         }
     });
 
-    // let getpopularimagename = '../api_popular/get_popular_image_name.php';
+    let getpopularimagename = '../api_popular/get_popular_image_name.php';
 
 
-    // $.ajax({
-    //     type: "GET",
-    //     url: getpopularimagename,
-    //     dataType: "json",
-    //     success: function (imagename) {
-    //         // 请求成功时执行的操作
-    //         console.log('Success:', imagename);
+    $.ajax({
+        type: "GET",
+        url: getpopularimagename,
+        dataType: "json",
+        success: function (imagename) {
+            // 请求成功时执行的操作
+            console.log('Success:', imagename);
 
-    //         $('#hpopular_image1_name').text(imagename.image1);
-    //         $('#popular_image2_name').text(imagename.image2);
-    //         $('#popular_image3_name').text(imagename.image3);
-    //         $('#popular_image4_name').text(imagename.image4);
-    //     },
-    //     error: function (error) {
-    //         // 请求失败时执行的操作
-    //         console.error('Error:', error);
-    //         console.error('imagename:', imagename);
-    //     }
-    // });
+            $('#popular_image1_name').text(imagename[0].name);
+            $('#popular_image2_name').text(imagename[1].name);
+            $('#popular_image3_name').text(imagename[2].name);
+
+            $('#popular_image1_span').text(imagename[0].text);
+            $('#popular_image2_span').text(imagename[1].text);
+            $('#popular_image3_span').text(imagename[2].text);
+
+
+        },
+        error: function (error) {
+            // 请求失败时执行的操作
+            console.error('Error:', error);
+            console.error('imagename:', imagename);
+        }
+    });
 
 });
