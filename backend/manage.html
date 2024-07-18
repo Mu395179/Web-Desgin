@@ -14,7 +14,28 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    <style></style>
+
+    <style>
+        .buttonbox {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .popular-button {
+            background-color: hsla(0, 0%, 100%, .2);
+            padding: 1.25rem 1.5rem;
+            color: aliceblue;
+            align-items: center;
+            margin: auto;
+            column-gap: .5rem;
+            font-family: var(--second-font);
+            font-weight: var(--font-semi-bold);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+    </style>
 </head>
 
 <body>
@@ -188,11 +209,11 @@
                 Enjoy The Beauty <br>
                 Of the world
             </h2>
-
-            <a href="../form_popular/name_popular_title_form.php" class="button" style="position: relative; margin-left: 44%;"> 
-                編輯文字敘述
-            </a>
-
+            <div class="buttonbox">
+                <a href="../form_popular/name_popular_title_form.php" class="popular-button">
+                    編輯文字敘述
+                </a>
+            </div>
 
             <div class="popular__container container grid">
                 <article class="popular__card">

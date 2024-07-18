@@ -3,6 +3,9 @@
 
 
 if (!empty($_FILES)) {
+
+
+
     if (!empty($_POST)) {
 
         // 初始化日期
