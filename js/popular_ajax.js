@@ -11,7 +11,7 @@ $(document).ready(function () {
         success: function (titlename) {
             // 请求成功时执行的操作
             console.log('Success:', titlename);
-            $.each(titlename, function(index, item) {
+            $.each(titlename, function (index, item) {
                 if (item.title) {
                     $('#section__title').text(item.title);
                 }
@@ -24,29 +24,28 @@ $(document).ready(function () {
     });
 
 
-    // let getpopularimage = '../api_popular/get_popular_image.php';
+    let getpopularimage = '../api_popular/get_popular_image.php';
 
-    // $.ajax({
-    //     type: "get",
-    //     url: getpopularimage,
-    //     data: "image",
-    //     dataType: "json",
-    //     success: function (image) {
-    //         // 請求成功時執行的操作
-    //         console.log('Success:', image);
+    $.ajax({
+        type: "get",
+        url: getpopularimage,
+        data: "image",
+        dataType: "json",
+        success: function (image) {
+            // 請求成功時執行的操作
+            console.log('Success:', image);
 
-    //         $('#popular_image1').attr('src', `../api/images/${image.image1}`);
-    //         $('#popular_image2').attr('src', `../api/images/${image.image2}`);
-    //         $('#popular_image3').attr('src', `../api/images/${image.image3}`);
-    //         $('#popular_image4').attr('src', `../api/images/${image.image4}`);
+            $('#popular_image1').attr('src', `../api/images/${image.popular_image1}`);
+            $('#popular_image2').attr('src', `../api/images/${image.popular_image2}`);
+            $('#popular_image3').attr('src', `../api/images/${image.popular_image3}`);
 
-    //     },
-    //     error: function (error) {
-    //         // 請求失敗時執行的操作
-    //         console.error('Error:', error);
-    //         console.log('value', value);
-    //     }
-    // });
+        },
+        error: function (error) {
+            // 請求失敗時執行的操作
+            console.error('Error:', error);
+            console.log('value', value);
+        }
+    });
 
     // let getpopularimagename = '../api_popular/get_popular_image_name.php';
 
