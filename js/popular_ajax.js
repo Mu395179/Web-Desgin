@@ -55,7 +55,7 @@ $(document).ready(function () {
         url: getpopularimagename,
         dataType: "json",
         success: function (imagename) {
-            // 请求成功时执行的操作
+
             console.log('Success:', imagename);
 
             $('#popular_image1_name').text(imagename[0].name);
@@ -69,7 +69,7 @@ $(document).ready(function () {
 
         },
         error: function (error) {
-            // 请求失败时执行的操作
+
             console.error('Error:', error);
             console.error('imagename:', imagename);
         }
