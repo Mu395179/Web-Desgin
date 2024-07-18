@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-17 17:21:40
+-- 產生時間： 2024-07-18 09:29:14
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -40,12 +40,15 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
-(45, '20240715140056.jpg', 'image/jpeg', '2026343', 'image2'),
-(46, '20240715140103.jpg', 'image/jpeg', '377159', 'image3'),
-(53, '20240715161415.jpg', 'image/jpeg', '1027467', 'image1'),
-(54, '20240715161423.jpg', 'image/jpeg', '2047289', 'image4'),
-(55, '20240715161521.jpg', 'image/jpeg', '628927', 'title'),
-(56, '20240717142534.jpg', 'image/jpeg', '1886371', 'about');
+(57, '20240718034929.jpg', 'image/jpeg', '178873', 'title'),
+(59, '20240718035258.jpg', 'image/jpeg', '231628', 'image2'),
+(60, '20240718035309.jpg', 'image/jpeg', '162091', 'image3'),
+(62, '20240718035334.jpg', 'image/jpeg', '200303', 'image4'),
+(63, '20240718035409.jpg', 'image/jpeg', '127767', 'about'),
+(64, '20240718035755.jpg', 'image/jpeg', '218278', 'image1'),
+(65, '20240718054104.jpg', 'image/jpeg', '152780', 'popular_image1'),
+(66, '20240718054111.jpg', 'image/jpeg', '192145', 'popular_image2'),
+(67, '20240718054118.jpg', 'image/jpeg', '145040', 'popular_image3');
 
 -- --------------------------------------------------------
 
@@ -64,10 +67,32 @@ CREATE TABLE `name_home_image` (
 --
 
 INSERT INTO `name_home_image` (`id`, `name`, `type`) VALUES
-(13, 'IryS', 'image3'),
-(14, 'Koseki Bijou', 'image4'),
-(31, 'suisei', 'image2'),
-(32, 'Gawr Gura', 'image1');
+(33, 'Quantum Bay', 'image1'),
+(34, 'Shadow City', 'image2'),
+(35, 'Techno Hive', 'image3'),
+(36, 'Steel Horizon', 'image4');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `name_popular_image`
+--
+
+CREATE TABLE `name_popular_image` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `text` text NOT NULL,
+  `type` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `name_popular_image`
+--
+
+INSERT INTO `name_popular_image` (`id`, `name`, `text`, `type`) VALUES
+(6, 'Techno Hive', 'Neonopolis', 'image1'),
+(7, 'Cyber Nexus', 'Steel Horizon', 'image2'),
+(8, 'Nexus District', 'Pulse City', 'image3');
 
 -- --------------------------------------------------------
 
@@ -87,7 +112,7 @@ CREATE TABLE `text_about` (
 --
 
 INSERT INTO `text_about` (`id`, `subtitle`, `title`, `description`) VALUES
-(6, 'Astronaut Ame', 'Holive EN Myth Watson Amelia', 'Astronaut Watson Amelia is the first VTuber to travel through space.');
+(7, 'AI governs the sprawling urban sprawl.', 'Rain-soaked alleys hide dark secrets.', 'Digital currencies replace traditional money.');
 
 -- --------------------------------------------------------
 
@@ -120,7 +145,7 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
-(27, 'HOLOLIVE EN', 'HOLOLIVE MATH', 'HOLOLIVE EN AMEZING');
+(28, 'Neon lights illuminate the dystopian cityscape.', 'Hackers navigate through virtual realities.', 'Streets are filled with cyber-enhanced individuals.');
 
 -- --------------------------------------------------------
 
@@ -138,7 +163,7 @@ CREATE TABLE `title_popular` (
 --
 
 INSERT INTO `title_popular` (`id`, `title`) VALUES
-(2, 'add title');
+(4, 'Cyber Metropolis');
 
 --
 -- 已傾印資料表的索引
@@ -154,6 +179,12 @@ ALTER TABLE `images`
 -- 資料表索引 `name_home_image`
 --
 ALTER TABLE `name_home_image`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- 資料表索引 `name_popular_image`
+--
+ALTER TABLE `name_popular_image`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -188,19 +219,25 @@ ALTER TABLE `title_popular`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `name_home_image`
 --
 ALTER TABLE `name_home_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `name_popular_image`
+--
+ALTER TABLE `name_popular_image`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `text_about`
 --
 ALTER TABLE `text_about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `text_popular`
@@ -212,13 +249,13 @@ ALTER TABLE `text_popular`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `title_popular`
 --
 ALTER TABLE `title_popular`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
