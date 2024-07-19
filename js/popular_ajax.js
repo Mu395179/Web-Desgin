@@ -9,7 +9,7 @@ $(document).ready(function () {
         url: gettitle,
         dataType: "json",
         success: function (titlename) {
-            // 请求成功时执行的操作
+
             console.log('Success:', titlename);
             $.each(titlename, function (index, item) {
                 if (item.title) {
@@ -18,7 +18,7 @@ $(document).ready(function () {
             });
         },
         error: function (error) {
-            // 请求失败时执行的操作
+
             console.error('Error:', error);
         }
     });
