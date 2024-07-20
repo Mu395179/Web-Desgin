@@ -37,51 +37,48 @@ $(document).ready(function () {
 
     // 防止默認的鏈接行為
     // 這行應該放在一個事件處理器內，這裡暫時不需要
-    // let url = '../api_explore/get_data.php';
+    let url = '../api_explore/get_data.php';
 
-    // // 使用$.ajax進行GET請求
-    // $.ajax({
-    //     type: "get",
-    //     url: url,
-    //     data: "data",
-    //     dataType: "json",
-    //     success: function (data) {
-    //         // 請求成功時執行的操作
-    //         console.log('Success:', data);
-    //         // 這裡應該是 data 而不是 res
-    //         let result = '';
-    //         $.each(data, function (key, value) {
-    //             console.log('value', value);
-    //             result += `
-    //                    <div class="explore__data">
-    //     <h3 class="explore__subtitle">
-    //         ${value.subtitle}
-    //     </h3>
-    //     <h1 class="explore__title">
-    //         ${value.title}
-    //     </h1>
-    //     <p class="explore__description">
-    //          ${value.description}
-    //     </p>
-    //       <a href="../form/image_form.php?class=title" class="button">
-    //                     更換照片<i class="ri-arrow-right-line"></i>
-    //                 </a>
-    //       <a href="../form/text_form.php" class="button">
-    //                     更換文字敘述<i class="ri-arrow-right-line"></i>
-    //                 </a>
+    // 使用$.ajax進行GET請求
+    $.ajax({
+        type: "get",
+        url: url,
+        data: "data",
+        dataType: "json",
+        success: function (data) {
+            // 請求成功時執行的操作
+            console.log('Success:', data);
+            // 這裡應該是 data 而不是 res
+            let result = '';
+            $.each(data, function (key, value) {
+                console.log('value', value);
+                result += `
+                       <div class="explore__data">
+        <h2 class="section__title">
+                             ${value.title}
+                        </h2>
+                        <p class="explore__description">
+                             ${value.description}
+                        </p>
+                        <a href="../form/image_form.php?class=explore_title" class="button">
+                            更換照片<i class="ri-arrow-right-line"></i>
+                        </a>
+                        <a href="../form/text_form.php" class="button">
+                            更換文字敘述<i class="ri-arrow-right-line"></i>
+                        </a>
 
-    // </div>
-    //                 `;
-    //         });
-    //         console.log('result', result);
-    //         explore__data.html(result);
+    </div>
+                    `;
+            });
+            console.log('result', result);
+            explore__data.html(result);
 
-    //     },
-    //     error: function (error) {
-    //         // 請求失敗時執行的操作
-    //         console.error('Error:', error);
-    //     }
-    // });
+        },
+        error: function (error) {
+            // 請求失敗時執行的操作
+            console.error('Error:', error);
+        }
+    });
 
     // let getexploreimage = '../api_explore/get_explore_image.php';
 
@@ -98,7 +95,7 @@ $(document).ready(function () {
     //         $('#explore_image2').attr('src', `../api/images/${image.image2}`);
     //         $('#explore_image3').attr('src', `../api/images/${image.image3}`);
     //         $('#explore_image4').attr('src', `../api/images/${image.image4}`);
-           
+
     //     },
     //     error: function (error) {
     //         // 請求失敗時執行的操作
