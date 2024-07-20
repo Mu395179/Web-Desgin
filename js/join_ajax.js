@@ -60,15 +60,14 @@ $(document).ready(function () {
                     <p class="join__description">
                     ${value.description}
                     </p>
-                    <form action="" class="join__form" style="margin-bottom: 10px;">
-                        <button class="join_button button">
-                             GO TO   ${value.title}<i class="ri-arrow-right-line"></i>
-                        </button>
+                     <a href="https://www.google.com/" class="button" style="margin-bottom: 10px;">
+                        Go to ${value.title}<i class="ri-arrow-right-line"></i>
+                    </a>
                     </form>
                     <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0">
                         更換照片<i class="ri-arrow-right-line"></i>
                     </a>
-                    <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"
+                    <a href="../form_join/text_form.php" class="button"
                         style="column-gap: 0">
                         編輯文字敘述
                     </a>
