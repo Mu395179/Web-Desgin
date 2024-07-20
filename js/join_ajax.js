@@ -37,51 +37,54 @@ $(document).ready(function () {
 
     // 防止默認的鏈接行為
     // 這行應該放在一個事件處理器內，這裡暫時不需要
-    // let url = '../api_join/get_data.php';
+    let url = '../api_join/get_data.php';
 
-    // // 使用$.ajax進行GET請求
-    // $.ajax({
-    //     type: "get",
-    //     url: url,
-    //     data: "data",
-    //     dataType: "json",
-    //     success: function (data) {
-    //         // 請求成功時執行的操作
-    //         console.log('Success:', data);
-    //         // 這裡應該是 data 而不是 res
-    //         let result = '';
-    //         $.each(data, function (key, value) {
-    //             console.log('value', value);
-    //             result += `
-    //                    <div class="join__data">
-    //     <h3 class="join__subtitle">
-    //         ${value.subtitle}
-    //     </h3>
-    //     <h1 class="join__title">
-    //         ${value.title}
-    //     </h1>
-    //     <p class="join__description">
-    //          ${value.description}
-    //     </p>
-    //       <a href="../form/image_form.php?class=title" class="button">
-    //                     更換照片<i class="ri-arrow-right-line"></i>
-    //                 </a>
-    //       <a href="../form/text_form.php" class="button">
-    //                     更換文字敘述<i class="ri-arrow-right-line"></i>
-    //                 </a>
+    // 使用$.ajax進行GET請求
+    $.ajax({
+        type: "get",
+        url: url,
+        data: "data",
+        dataType: "json",
+        success: function (data) {
+            // 請求成功時執行的操作
+            console.log('Success:', data);
+            // 這裡應該是 data 而不是 res
+            let result = '';
+            $.each(data, function (key, value) {
+                console.log('value', value);
+                result += `
+                       <div class="join__data">
+       <h2 class="secion__title">
+                         ${value.title}
+                    </h2>
+                    <p class="join__description">
+                    ${value.description}
+                    </p>
+                    <form action="" class="join__form" style="margin-bottom: 10px;">
+                        <button class="join_button button">
+                             GO TO   ${value.title}<i class="ri-arrow-right-line"></i>
+                        </button>
+                    </form>
+                    <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0">
+                        更換照片<i class="ri-arrow-right-line"></i>
+                    </a>
+                    <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"
+                        style="column-gap: 0">
+                        編輯文字敘述
+                    </a>
 
-    // </div>
-    //                 `;
-    //         });
-    //         console.log('result', result);
-    //         join__data.html(result);
+    </div>
+                    `;
+            });
+            console.log('result', result);
+            join__data.html(result);
 
-    //     },
-    //     error: function (error) {
-    //         // 請求失敗時執行的操作
-    //         console.error('Error:', error);
-    //     }
-    // });
+        },
+        error: function (error) {
+            // 請求失敗時執行的操作
+            console.error('Error:', error);
+        }
+    });
 
     // let getjoinimage = '../api_join/get_join_image.php';
 
