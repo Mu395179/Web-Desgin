@@ -63,7 +63,7 @@ $(document).ready(function () {
                         <a href="../form/image_form.php?class=explore_title" class="button">
                             更換照片<i class="ri-arrow-right-line"></i>
                         </a>
-                        <a href="../form/text_form.php" class="button">
+                        <a href="../form_explore/text_form.php" class="button">
                             更換文字敘述<i class="ri-arrow-right-line"></i>
                         </a>
 

@@ -138,3 +138,4 @@ $Name_home_image = new DB('name_home_image');
 $Text_about = new DB('text_about');
 $Title_popular = new DB('title_popular');
 $Name_popular_image = new DB('name_popular_image');
+$Title_explore = new DB('title_explore');
