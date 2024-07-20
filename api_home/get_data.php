@@ -1,7 +1,7 @@
 <?php
 include_once "../api/base.php";
 
-$data = q("SELECT * FROM `title_explore`");
+$data = q("SELECT * FROM `titles`");
 
 echo json_encode($data);
 

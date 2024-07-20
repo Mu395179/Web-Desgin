@@ -80,29 +80,27 @@ $(document).ready(function () {
         }
     });
 
-    // let getexploreimage = '../api_explore/get_explore_image.php';
+    let getexploreimage = '../api_explore/get_home_image.php';
 
-    // $.ajax({
-    //     type: "get",
-    //     url: getexploreimage,
-    //     data: "image",
-    //     dataType: "json",
-    //     success: function (image) {
-    //         // 請求成功時執行的操作
-    //         console.log('Success:', image);
+    $.ajax({
+        type: "get",
+        url: getexploreimage,
+        data: "image",
+        dataType: "json",
+        success: function (image) {
+            // 請求成功時執行的操作
+            console.log('Success:', image);
 
-    //         $('#explore_image1').attr('src', `../api/images/${image.image1}`);
-    //         $('#explore_image2').attr('src', `../api/images/${image.image2}`);
-    //         $('#explore_image3').attr('src', `../api/images/${image.image3}`);
-    //         $('#explore_image4').attr('src', `../api/images/${image.image4}`);
+            $('#user').attr('src', `../api/images/${image.user}`);
+           
 
-    //     },
-    //     error: function (error) {
-    //         // 請求失敗時執行的操作
-    //         console.error('Error:', error);
-    //         console.log('value', value);
-    //     }
-    // });
+        },
+        error: function (error) {
+            // 請求失敗時執行的操作
+            console.error('Error:', error);
+            console.log('value', value);
+        }
+    });
 
     // let getexploreimagename = '../api_explore/get_explore_image_name.php';
 
