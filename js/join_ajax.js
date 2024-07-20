@@ -60,7 +60,7 @@ $(document).ready(function () {
                     <p class="join__description">
                     ${value.description}
                     </p>
-                     <a href="https://www.google.com/" class="button" style="margin-bottom: 10px;">
+                     <a href="../backend/manage.html" class="popular-button" style="margin-bottom: 10px;">
                         Go to ${value.title}<i class="ri-arrow-right-line"></i>
                     </a>
                     </form>
