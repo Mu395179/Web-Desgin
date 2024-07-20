@@ -102,29 +102,27 @@ $(document).ready(function () {
         }
     });
 
-    // let getexploreimagename = '../api_explore/get_explore_image_name.php';
+    let getusername = '../api_explore/get_user_name.php';
 
-    // $(document).ready(function() {
-    //     $.ajax({
-    //         type: "GET",
-    //         url: getexploreimagename,
-    //         dataType: "json",
-    //         success: function(imagename) {
-    //             // 请求成功时执行的操作
-    //             console.log('Success:', imagename);
 
-    //             $('#explore_image1_name').text(imagename.image1);
-    //             $('#explore_image2_name').text(imagename.image2);
-    //             $('#explore_image3_name').text(imagename.image3);
-    //             $('#explore_image4_name').text(imagename.image4);
-    //         },
-    //         error: function(error) {
-    //             // 请求失败时执行的操作
-    //             console.error('Error:', error);
-    //             console.error('imagename:', imagename);
-    //         }
-    //     });
-    // });
+        $.ajax({
+            type: "GET",
+            url: getusername,
+            dataType: "json",
+            success: function(imagename) {
+                // 请求成功时执行的操作
+                console.log('Success:', imagename);
+
+                $('#user_name').text(imagename.name);
+                
+            },
+            error: function(error) {
+                // 请求失败时执行的操作
+                console.error('Error:', error);
+                console.error('imagename:', imagename);
+            }
+        });
+
 
 
 
