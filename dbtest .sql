@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-20 16:04:42
+-- 產生時間： 2024-07-21 04:45:31
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- 資料庫： `dbtest`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `acc` varchar(30) NOT NULL,
+  `pw` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `admin`
+--
+
+INSERT INTO `admin` (`id`, `acc`, `pw`) VALUES
+(1, 'admin', '1234');
 
 -- --------------------------------------------------------
 
@@ -46,12 +65,12 @@ INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
 (91, '20240720154925.jpg', 'image/jpeg', '2026343', 'image2'),
 (92, '20240720154931.jpg', 'image/jpeg', '377159', 'image3'),
 (93, '20240720154944.jpg', 'image/jpeg', '2047289', 'image4'),
-(94, '20240720155000.jpg', 'image/jpeg', '3190194', 'about'),
 (95, '20240720155727.jpg', 'image/jpeg', '380248', 'popular_image1'),
 (96, '20240720155744.jpg', 'image/jpeg', '391648', 'popular_image2'),
 (98, '20240720155808.jpg', 'image/jpeg', '2056817', 'popular_image3'),
 (99, '20240720155823.jpg', 'image/jpeg', '1053160', 'explore_title'),
-(101, '20240720160200.jpg', 'image/jpeg', '361055', 'join');
+(103, '20240721043828.jpg', 'image/jpeg', '3190194', 'about'),
+(104, '20240721043838.jpg', 'image/jpeg', '1562942', 'join');
 
 -- --------------------------------------------------------
 
@@ -69,7 +88,7 @@ CREATE TABLE `logo` (
 --
 
 INSERT INTO `logo` (`id`, `name`) VALUES
-(4, 'Hololive');
+(7, 'HOLOLIVE');
 
 -- --------------------------------------------------------
 
@@ -169,7 +188,7 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
-(35, '', 'Shark with Radahn', 'Shark with Radahn in the Elden Ring');
+(37, 'Hololive', 'Hololive EN', 'Hololive EN Myth');
 
 -- --------------------------------------------------------
 
@@ -188,7 +207,7 @@ CREATE TABLE `title_explore` (
 --
 
 INSERT INTO `title_explore` (`id`, `title`, `description`) VALUES
-(2, '2312312312312312', '321312323');
+(3, 'Gura', 'Gura Adventure');
 
 -- --------------------------------------------------------
 
@@ -243,11 +262,17 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`) VALUES
-(6, '測試TEST');
+(9, 'David Wu');
 
 --
 -- 已傾印資料表的索引
 --
+
+--
+-- 資料表索引 `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- 資料表索引 `images`
@@ -320,16 +345,22 @@ ALTER TABLE `user`
 --
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `logo`
 --
 ALTER TABLE `logo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `name_home_image`
@@ -359,13 +390,13 @@ ALTER TABLE `text_popular`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `title_explore`
 --
 ALTER TABLE `title_explore`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `title_join`
@@ -383,7 +414,7 @@ ALTER TABLE `title_popular`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

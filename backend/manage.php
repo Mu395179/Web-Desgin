@@ -62,6 +62,9 @@ if(!isset($_SESSION['user'])){
                     <li class="nav__item">
                         <a href="#explore" class="nav__link">Explore</a>
                     </li>
+                    <li class="nav__item">
+                        <a href="../form_login/logout.php" class="nav__link">Logout</a>
+                    </li>
                 </ul>
                 <!-- close button -->
                 <div class="nav__close" id="nav-close">
