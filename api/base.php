@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+$_SESSION['username'] = "admin";
+$_SESSION['password'] = "1234";
+
+
+
 class DB
 {
     protected $table;
@@ -142,4 +147,5 @@ $Title_explore = new DB('title_explore');
 $User = new DB('user');
 $Title_join = new DB('title_join');
 $Logo = new DB('logo');
+$Admin = new DB("admin");
 

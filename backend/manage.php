@@ -1,3 +1,13 @@
+<?php include_once "../api/base.php";
+
+if(!isset($_SESSION['user'])){
+    to("../front/index.html");
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -335,7 +345,7 @@
                         porro, similique fugiat nam obcaecati deleniti, aliquam quos ad. Modi qui ad ipsa provident
                         libero ducimus voluptates.
                     </p>
-                    <form action="" class="join__form" style="margin-bottom: 10px;">
+                    <form action="" class="join__form" style="margin-bottom: 10px; margin-right: 20px;">
                         <button class="join_button button">
                             Subscrible Our Newsletter <i class="ri-arrow-right-line"></i>
                         </button>

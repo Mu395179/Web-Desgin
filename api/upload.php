@@ -30,7 +30,7 @@ if (!empty($_FILES)) {
 
             }
             $Images->save($data);
-            to('../backend/manage.html');
+            to('../backend/manage.php');
         }
     }
 } else {

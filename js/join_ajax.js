@@ -60,17 +60,18 @@ $(document).ready(function () {
                     <p class="join__description">
                     ${value.description}
                     </p>
-                     <a href="../backend/manage.html" class="popular-button" style="margin-bottom: 10px;">
+                     <a href="../backend/manage.php" class="popular-button" style="margin-bottom: 20px; margin-right: 10px;">
                         Go to ${value.title}<i class="ri-arrow-right-line"></i>
                     </a>
-                    </form>
-                    <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0">
+                   <div style="margin-top: 30px">
+                    <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0;">
                         更換照片<i class="ri-arrow-right-line"></i>
                     </a>
                     <a href="../form_join/text_form.php" class="button"
                         style="column-gap: 0">
                         編輯文字敘述
                     </a>
+                     </div>
 
     </div>
                     `;

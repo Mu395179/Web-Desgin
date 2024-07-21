@@ -31,7 +31,7 @@
         $.post("../api_home/edit_data.php", form, function(res) {
             if (res == 1) {
                 alert('新增成功');
-                window.location.href = "../backend/manage.html";
+                window.location.href = "../backend/manage.php";
                
             } else {
                 alert('新增失敗')
