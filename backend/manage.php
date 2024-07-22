@@ -1,6 +1,6 @@
 <?php include_once "../api/base.php";
 
-if(!isset($_SESSION['user'])){
+if (!isset($_SESSION['user'])) {
     to("../front/index.html");
 }
 
@@ -14,7 +14,7 @@ if(!isset($_SESSION['user'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -38,13 +38,14 @@ if(!isset($_SESSION['user'])){
     <header class="header" id="header">
         <nav class="nav container">
             <div> <a href="#" class="nav__logo" id="logo">
-                Travel
-            </a>
-            <a href="../form_logo/name_logo_form.php" class="button" style="column-gap: 0">
-                編輯LOGO
-            </a></div>
-           
-           
+                    Travel
+                </a>
+                <a href="../form_logo/name_logo_form.php" class="button" style="column-gap: 0">
+                    編輯LOGO
+                </a>
+            </div>
+
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -297,8 +298,8 @@ if(!isset($_SESSION['user'])){
             </div>
 
         </section>
-         <!-- ============explore============ -->
-         <script src="../js/explore_ajax.js"></script>
+        <!-- ============explore============ -->
+        <script src="../js/explore_ajax.js"></script>
         <section class="explore section" id="explore">
             <div class="explore__container">
                 <div class="explore__image">
@@ -316,26 +317,26 @@ if(!isset($_SESSION['user'])){
                             quidem omnis magni quam, adipisci odit laudantium eius mollitia illum nulla iusto
                             necessitatibus repudiandae id aspernatur dolor minima.
                         </p> -->
-                        
+
                     </div>
                     <div class="explore__user">
-                        <img src="https://picsum.photos/200/220/?random=30" alt="explore image" class="explore__perfil" id="user">
+                        <img src="https://picsum.photos/200/220/?random=30" alt="explore image" class="explore__perfil"
+                            id="user">
                         <span class="explore name" id="user_name">David Wu</span>
                         <a href="../form/image_form.php?class=user" class="button" style="column-gap: 0">
                             更換照片<i class="ri-arrow-right-line"></i>
                         </a>
-                        <a href="../form_explore/name_explore_image_form.php" class="button"
-                        style="column-gap: 0">
-                        編輯名稱
+                        <a href="../form_explore/name_explore_image_form.php" class="button" style="column-gap: 0">
+                            編輯名稱
 
-                    </a>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- ============join============ -->
 
- <script src="../js/join_ajax.js"></script>
+        <script src="../js/join_ajax.js"></script>
         <section class="join section">
             <div class="join__container container grid">
                 <div class="join__data">
@@ -343,7 +344,7 @@ if(!isset($_SESSION['user'])){
                         Your Journey <br>
                         Starts Here
                     </h2>
-                    <p class="join__description" >
+                    <p class="join__description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsa aperiam amet dolores
                         porro, similique fugiat nam obcaecati deleniti, aliquam quos ad. Modi qui ad ipsa provident
                         libero ducimus voluptates.
