@@ -380,7 +380,7 @@ if (!isset($_SESSION['user'])) {
                         Travel with us and explore <br>
                         the world without limits.
                     </p>
-                    <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0">
+                    <a href="../form_link/edit_link_form.php" class="button" style="column-gap: 0">
                         編輯文字敘述<i class="ri-arrow-right-line"></i>
                     </a>
                     <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"

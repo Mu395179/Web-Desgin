@@ -1,15 +1,14 @@
 <?php
 include_once "../api/base.php";
 
-$link = [
-    q("SELECT * FROM `links`"),
+$link =
+    q("SELECT * FROM `links`")
+;
 
-]
 
+// dd($link[0]);
 
-    // dd($data);
-
-    ?>
+?>
 
 
 
@@ -26,42 +25,121 @@ $link = [
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .title {
+            height: 50px;
+            text-align: center;
+            font-size: larger;
+            /* border: 1px solid black; */
+            /* display: inline-block; */
+            margin: 0;
+
+        }
+
+        .item {
+            height: 30px;
+            text-align: start;
+            font-size: large;
+
+
+        }
+
+        .name {
+            width: 100px;
+
+        }
+
+        .source {
+            width: 500px;
+
+        }
+
+        .type {
+            width: 50px;
+
+        }
+
+        .Method {
+            width: 100px;
+            border: 0px;
+
+
+        }
+    </style>
+
+
 </head>
 
 <body>
     <div class="container">
         <h1>Link 編輯</h1>
         <div class="row">
-            <div class="col-1 title">id</div>
-            <div class="col-1 title">name</div>
-            <div class="col-7 title">source</div>
-            <div class="col-1 title">type</div>
-            <div class="col-2 title">Method</div>
+            <div class="name title">name</div>
+            <div class="source title">source</div>
+            <div class="type title">type</div>
         </div>
 
-        <?php
-        $link = [
-            ['id' => 1, 'name' => 'title', 'source' => 'https://x.com/baloolax/status/1810744203875635342', 'type' => 'image'],
-            ['id' => 2, 'name' => 'google', 'source' => 'https://www.google.com/', 'type' => 'image'],
-            ['id' => 3, 'name' => 'facebook', 'source' => 'https://www.google.com/', 'type' => 'image']
-        ];
+        <?php foreach ($link as $value) { ?>
+            <div class="row mb-2">
+                <form method="post" class="d-flex needs-validation" novalidate>
+                    <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>" value="<?= $value['id']; ?>" required>
+                    <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>" value="<?= $value['name']; ?>" required>
+                    <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>" value="<?= $value['source']; ?>" required>
+                    <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>" value="<?= $value['type']; ?>" required>
 
-        foreach ($link as $key => $value) {
-            ?>
-            <div class="row">
-                <form action="../api_link/edit_link.php" method="get" class="d-flex">
-                    <input class="col-1 item" type="text" name="id" value="<?php echo $value['id']; ?>">
-                    <input class="col-1 item" type="text" name="name" value="<?php echo $value['name']; ?>">
-                    <input class="col-7 item" type="text" name="source" value="<?php echo $value['source']; ?>">
-                    <input class="col-1 item" type="text" name="type" value="<?php echo $value['type']; ?>">
-                    <div class="col-2 item">
-                        <button type="submit">submit</button>
-
-                    </div>
+                    <input class="btn btn-success mx-2" type="button" value="編輯" onclick="send(<?= $value['id']; ?>)">
+                    <input class="btn btn-danger mx-1" type="button" value="刪除" onclick="del(<?= $value['id']; ?>)">
                 </form>
             </div>
         <?php } ?>
+
+        <div class="row">
+            <a href="../backend/manage.php"><button class="btn btn-dark">返回管理頁</button></a>
+        </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function send(id) {
+            // 因為#id 是唯一，所以foreach的資料需要增加後墜，所以就把$value['id']都加在id後面
+            // 這樣foreach 出來的屬性都是唯一值
+            let form = {
+                id: $("#id-" + id).val(),
+                name: $("#name-" + id).val(),
+                source: $("#source-" + id).val(),
+                type: $("#type-" + id).val(),
+            };
+            $.post("../api_link/edit_link.php", form, function (res) {
+                console.log('form', form);
+                if (res == 1) {
+                    alert('新增成功');
+                    console.log('form', form);
+                } else {
+                    alert('新增失敗');
+                    console.log(res);
+                }
+            });
+        }
+
+        function del(id) {
+            let form = {
+                id: $("#id-" + id).val(),
+            };
+            $.post("../api_link/delete_link.php", form, function (res) {
+                if (res == 1) {
+                    alert('刪除成功');
+                    location.reload();  // 刪除成功後重新加載頁面
+                } else {
+                    alert('刪除失敗');
+                    console.log(res);
+                }
+            });
+        }
+    </script>
 </body>
+
 
 </html>
