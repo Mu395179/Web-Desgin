@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-21 04:45:31
+-- 產生時間： 2024-07-23 09:25:55
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -71,6 +71,35 @@ INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
 (99, '20240720155823.jpg', 'image/jpeg', '1053160', 'explore_title'),
 (103, '20240721043828.jpg', 'image/jpeg', '3190194', 'about'),
 (104, '20240721043838.jpg', 'image/jpeg', '1562942', 'join');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `links`
+--
+
+CREATE TABLE `links` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `source` text NOT NULL,
+  `type` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `links`
+--
+
+INSERT INTO `links` (`id`, `name`, `source`, `type`) VALUES
+(1, 'title', 'https://x.com/baloolax/status/1810744203875635342', 'line1'),
+(2, 'google', 'https://www.google.com/', 'line1'),
+(3, 'facebook', 'https://www.google.com/', 'line1'),
+(4, 'instagram', 'https://www.instagram.com/', 'line2'),
+(5, '111', '111.com/', 'line2'),
+(6, '222', '222.com/', 'line2'),
+(7, '333', '333.com/', 'line2'),
+(8, '444', '444.com/', 'line3'),
+(9, '555', '555.com/', 'line3'),
+(10, '666', '666.com/', 'line3');
 
 -- --------------------------------------------------------
 
@@ -281,6 +310,12 @@ ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `links`
+--
+ALTER TABLE `links`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `logo`
 --
 ALTER TABLE `logo`
@@ -355,6 +390,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `links`
+--
+ALTER TABLE `links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `logo`
