@@ -148,4 +148,5 @@ $User = new DB('user');
 $Title_join = new DB('title_join');
 $Logo = new DB('logo');
 $Admin = new DB("admin");
+$Links = new DB("links");
 

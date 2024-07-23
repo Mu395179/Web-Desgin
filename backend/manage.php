@@ -370,7 +370,7 @@ if (!isset($_SESSION['user'])) {
         </section>
     </main>
     <!-- ============footer============ -->
-
+    <script src="../js/foot.js"></script>
     <footer class="footer">
         <div class="footer__container container grid">
             <div class="footer__content grid">
@@ -384,7 +384,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="footer__data grid">
                     <div>
                         <h3 class="footer__title">About</h3>
-                        <ul class="footer_links">
+                        <ul class="footer_links" id="line1">
                             <li> <a href="#" class="footer__link">About Us</a></li>
                             <li> <a href="#" class="footer__link">Features</a></li>
                             <li> <a href="#" class="footer__link">New & Blog</a></li>
@@ -392,7 +392,7 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <div>
                         <h3 class="footer__title">Company</h3>
-                        <ul class="footer_links">
+                        <ul class="footer_links" id="line2">
                             <li> <a href="#" class="footer__link">FAQs</a></li>
                             <li> <a href="#" class="footer__link">History</a></li>
                             <li> <a href="#" class="footer__link">Testimonials</a></li>
@@ -400,20 +400,20 @@ if (!isset($_SESSION['user'])) {
                     </div>
                     <div>
                         <h3 class="footer__title">Contact</h3>
-                        <ul class="footer_links">
+                        <ul class="footer_links" id="line3">
                             <li> <a href="#" class="footer__link">Call Center</a></li>
                             <li> <a href="#" class="footer__link">Support Center</a></li>
                             <li> <a href="#" class="footer__link">Contact Us</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <!-- <div>
                         <h3 class="footer__title">Support</h3>
                         <ul class="footer_links">
                             <li> <a href="#" class="footer__link">Privacy Policy</a></li>
                             <li> <a href="#" class="footer__link">Terms & Services</a></li>
                             <li> <a href="#" class="footer__link">Payments</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="footer__group">
