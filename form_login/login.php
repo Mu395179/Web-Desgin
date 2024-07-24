@@ -11,33 +11,33 @@
 <body>
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="loginModalLabel">Admin Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <legend>Admin Login</legend>
-                    <table>
-                        <tr>
-                            <td>帳號</td>
-                            <td><input type="text" name="username" id="acc" value="admin"></td>
-                        </tr>
-                        <tr>
-                            <td>密碼</td>
-                            <td><input type="password" name="password" id="pw" value="1234"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button onclick="login()">登入</button>
-                                <button onclick="clearFields()">清除</button>
-                            </td>
-
-                        </tr>
-                    </table>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="acc" class="form-label">帳號</label>
+                                    <input type="text" class="form-control" name="username" id="acc" value="admin">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pw" class="form-label">密碼</label>
+                                    <input type="password" class="form-control" name="password" id="pw" value="1234">
+                                </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-primary" onclick="login()">登入</button>
+                                    <button type="button" class="btn btn-secondary" onclick="clearFields()">清除</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
