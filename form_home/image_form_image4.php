@@ -18,7 +18,7 @@
             </div>
             <div class="modal-body">
                 <form action="../api/upload.php" method="post" enctype="multipart/form-data">
-                    <input type="text" name="class" value="<?php $_GET['class']?>" hidden>
+                    <input type="text" name="class" value="image4" >
                     <div class="mb-3">
                         <input class="form-control" type="file" name="file">
                     </div>
