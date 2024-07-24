@@ -76,7 +76,9 @@ input{
     outline: none;
     border: none;
 
+
 }
+
 h1,h2,h3,h4{
     color: var(--title-color);
     font-family: var(--second-font);
@@ -176,6 +178,13 @@ img{
     font-weight: var(--font-medium);
 }
 
+#nav__link{
+    position: relative;
+    color: var(--title-color);
+    font-family: var(--second-font);
+    font-weight: var(--font-medium);
+}
+
 .nav__link::after{
     content: '';
     width: 0;
@@ -219,6 +228,10 @@ img{
 .nav__link:hover::after{
     width: 70%;
 }
+#nav__link:hover::after{
+    width: 70%;
+}
+
 
 /* ========= HOME =========*/
 .home{

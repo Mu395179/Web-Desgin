@@ -58,7 +58,9 @@
                         <a href="#explore" class="nav__link">Explore</a>
                     </li>
                     <li class="nav__item">
-                        <a href="../form_login/login.php" class="nav__link">Login</a>
+                        <button class="nav__link" style=" background-color: transparent;" onclick="$('#modal').load('../form_login/login.php')" style="background-color: none;">
+                            Login
+                        </button>
                     </li>
                 </ul>
                 <!-- close button -->
@@ -74,7 +76,9 @@
 
         </nav>
     </header>
+    <div id="modal">
 
+    </div>
     <main class="main">
         <!-- ============home============ -->
         <script src="../js/home_ajax.js"></script>
