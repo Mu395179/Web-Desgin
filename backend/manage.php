@@ -140,42 +140,43 @@ if (!isset($_SESSION['user'])) {
                         <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image1.php')">
                             更換照片 </a>
-                        <a href="../form/name_home_image_form.php?type=image1" class="button" style="column-gap: 0">
-                            編輯照片名稱
-                        </a>
+
+                        <a href="javascript:void(0);" class="button"
+                            onclick="$('#modal').load('../form/name_home_image1_form.php')">
+                            編輯照片名稱 </a>
 
                     </article>
 
                     <article class="home__card">
 
-                    <a href="javascript:void(0);" class="button"
+                        <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image2.php')">
                             更換照片 </a>
-                        <a href="../form/name_home_image_form.php?type=image2" class="button" style="column-gap: 0">
-                            編輯照片名稱
-                        </a>
+                            <a href="javascript:void(0);" class="button"
+                            onclick="$('#modal').load('../form/name_home_image2_form.php')">
+                            編輯照片名稱 </a>
 
 
                     </article>
 
                     <article class="home__card">
 
-                    <a href="javascript:void(0);" class="button"
+                        <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image3.php')">
                             更換照片 </a>
-                        <a href="../form/name_home_image_form.php?type=image3" class="button" style="column-gap: 0">
-                            編輯照片名稱
-                        </a>
+                            <a href="javascript:void(0);" class="button"
+                            onclick="$('#modal').load('../form/name_home_image3_form.php')">
+                            編輯照片名稱 </a>
                     </article>
 
                     <article class="home__card">
 
-                    <a href="javascript:void(0);" class="button"
+                        <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image4.php')">
                             更換照片 </a>
-                        <a href="../form/name_home_image_form.php?type=image4" class="button" style="column-gap: 0">
-                            編輯照片名稱
-                        </a>
+                            <a href="javascript:void(0);" class="button"
+                            onclick="$('#modal').load('../form/name_home_image4_form.php')">
+                            編輯照片名稱 </a>
 
                     </article>
 
