@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-23 09:25:55
+-- 產生時間： 2024-07-24 02:33:50
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -94,12 +94,13 @@ INSERT INTO `links` (`id`, `name`, `source`, `type`) VALUES
 (2, 'google', 'https://www.google.com/', 'line1'),
 (3, 'facebook', 'https://www.google.com/', 'line1'),
 (4, 'instagram', 'https://www.instagram.com/', 'line2'),
-(5, '111', '111.com/', 'line2'),
-(6, '222', '222.com/', 'line2'),
+(5, '999', '999.com/', 'line3'),
+(6, '777', '777.com/', 'line5'),
 (7, '333', '333.com/', 'line2'),
 (8, '444', '444.com/', 'line3'),
 (9, '555', '555.com/', 'line3'),
-(10, '666', '666.com/', 'line3');
+(11, '111', '111.com/', 'line2'),
+(12, '123', '123.com', 'line1');
 
 -- --------------------------------------------------------
 
@@ -395,7 +396,7 @@ ALTER TABLE `images`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `links`
 --
 ALTER TABLE `links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `logo`
