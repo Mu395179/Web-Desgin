@@ -1,3 +1,13 @@
+<?php
+
+include_once "../api/base.php";
+
+$data = $Logo->all();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +29,7 @@
                 <div class="modal-body">
                     <form method="post">
                         <label class="form-label mt-2" for="name">name:</label><br>
-                        <input class="form-control" type="text" name="name" id="username"><br>
+                        <input class="form-control" type="text" name="name" id="username" value="<?=$data[0]['name']?>"><br>
 
                         <input type="submit" class="btn btn-primary" value="送出" onclick="send()">
                         <input type="reset" value="重置" class='btn btn-warning'>

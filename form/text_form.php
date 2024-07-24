@@ -1,3 +1,13 @@
+<?php
+
+include_once "../api/base.php";
+
+$data = $Title->all();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,14 +29,11 @@
                 <div class="modal-body">
                     <form method="post" id="hometitlehome">
                         <label class="form-label mt-2" for="subtitle">subtitle:</label><br>
-                        <textarea class="form-control " type="text" name="subtitle" id="subtitle" rows="2"
-                            cols="100"></textarea><br>
+                        <input class="form-control " type="text" name="subtitle" id="subtitle"  value="<?=$data[0]['subtitle']?>"><br>
                         <label class="form-label mt-2" for="title">title:</label><br>
-                        <textarea class="form-control " type="text" name="title" id="title" rows="2"
-                            cols="100"></textarea><br>
+                        <input class="form-control " type="text" name="title" id="title" value="<?=$data[0]['title']?>"><br>
                         <label class="form-label mt-2" for="description">description:</label><br>
-                        <textarea class="form-control " type="text" name="description" id="description" rows="2"
-                            cols="100"></textarea><br>
+                        <input class="form-control " type="text" name="description" id="description" value="<?=$data[0]['description']?>"><br>
                         <input  class='btn btn-primary' type="button" value="送出" onclick="send()">
                         <input type="reset" value="重置" class='btn btn-warning'>
                     </form>
