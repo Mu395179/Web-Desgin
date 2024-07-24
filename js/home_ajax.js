@@ -62,13 +62,12 @@ $(document).ready(function () {
         <p class="home__description">
              ${value.description}
         </p>
-          <a href="../form/image_form.php?class=title" class="button">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
-          <a href="../form/text_form.php" class="button">
+          <a style="margin:10px;" href="javascript:void(0);" class="button" onclick="$('#modal').load('../form_home/image_form.php')">
+   更換照片 </a>
+
+                    <a href="../form/text_form.php" class="button">
                         更換文字敘述<i class="ri-arrow-right-line"></i>
                     </a>
-
     </div>
                     `;
             });
@@ -97,7 +96,7 @@ $(document).ready(function () {
             $('#home_image2').attr('src', `../api/images/${image.image2}`);
             $('#home_image3').attr('src', `../api/images/${image.image3}`);
             $('#home_image4').attr('src', `../api/images/${image.image4}`);
-           
+
         },
         error: function (error) {
             // 請求失敗時執行的操作
@@ -108,12 +107,12 @@ $(document).ready(function () {
 
     let gethomeimagename = '../api_home/get_home_image_name.php';
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         $.ajax({
             type: "GET",
             url: gethomeimagename,
             dataType: "json",
-            success: function(imagename) {
+            success: function (imagename) {
                 // 请求成功时执行的操作
                 console.log('Success:', imagename);
 
@@ -122,7 +121,7 @@ $(document).ready(function () {
                 $('#home_image3_name').text(imagename.image3);
                 $('#home_image4_name').text(imagename.image4);
             },
-            error: function(error) {
+            error: function (error) {
                 // 请求失败时执行的操作
                 console.error('Error:', error);
                 console.error('imagename:', imagename);

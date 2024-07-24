@@ -40,9 +40,10 @@ if (!isset($_SESSION['user'])) {
             <div> <a href="#" class="nav__logo" id="logo">
                     Travel
                 </a>
-                <a href="../form_logo/name_logo_form.php" class="button" style="column-gap: 0">
-                    編輯LOGO
-                </a>
+
+                <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_logo/name_logo_form.php')">
+        編輯LOGO </a>
             </div>
 
 
@@ -80,7 +81,9 @@ if (!isset($_SESSION['user'])) {
 
         </nav>
     </header>
+    <div id="modal">
 
+    </div>
     <main class="main">
         <!-- ============home============ -->
         <script src="../js/home_ajax.js"></script>
@@ -95,6 +98,7 @@ if (!isset($_SESSION['user'])) {
                 <div class="home__data">
 
                 </div>
+               
                 <div class="home__cards grid">
                     <article class="home__card">
                         <img src="" alt="home image" class="home__card-img" id="home_image1">
