@@ -65,12 +65,12 @@ $(document).ready(function () {
                         ${value.description}
                     </p>
                 </div>
-          <a href="../form/image_form.php?class=about" class="button">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
-          <a href="../form_about/text_form.php" class="button">
-                        更換文字敘述<i class="ri-arrow-right-line"></i>
-                    </a>
+          <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_about/image_form_about.php')">
+        更換照片 </a>
+               <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_about/text_form.php')">
+        更換文字敘述 </a>      
 
     </div>
                     `;
