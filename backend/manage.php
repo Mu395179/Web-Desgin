@@ -277,30 +277,30 @@ if (!isset($_SESSION['user'])) {
                     <a href="javascript:void(0);" class="button"
                         onclick="$('#modal').load('../form_popular/image_form_image1.php')">
                         更換圖片 </a>
-                    <a href="../form_popular/name_popular_image_form.php?type=image1" class="button"
-                        style="column-gap: 0">
-                        編輯照片名稱
-                    </a>
+
+                    <a href="javascript:void(0);" class="button"
+                        onclick="$('#modal').load('../form_popular/name_popular_image1_form.php')">
+                        編輯圖片名稱 </a>
                 </article>
 
                 <article class="popular__card">
-                <a href="javascript:void(0);" class="button"
+                    <a href="javascript:void(0);" class="button"
                         onclick="$('#modal').load('../form_popular/image_form_image2.php')">
                         更換圖片 </a>
-                    <a href="../form_popular/name_popular_image_form.php?type=image2" class="button"
-                        style="column-gap: 0">
-                        編輯照片名稱
-                    </a>
+
+                    <a href="javascript:void(0);" class="button"
+                        onclick="$('#modal').load('../form_popular/name_popular_image2_form.php')">
+                        編輯圖片名稱 </a>
                 </article>
 
                 <article class="popular__card">
-                <a href="javascript:void(0);" class="button"
+                    <a href="javascript:void(0);" class="button"
                         onclick="$('#modal').load('../form_popular/image_form_image3.php')">
                         更換圖片 </a>
-                    <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"
-                        style="column-gap: 0">
-                        編輯照片名稱
-                    </a>
+                  
+                        <a href="javascript:void(0);" class="button"
+                        onclick="$('#modal').load('../form_popular/name_popular_image3_form.php')">
+                        編輯圖片名稱 </a>
                 </article>
             </div>
 
