@@ -297,8 +297,8 @@ if (!isset($_SESSION['user'])) {
                     <a href="javascript:void(0);" class="button"
                         onclick="$('#modal').load('../form_popular/image_form_image3.php')">
                         更換圖片 </a>
-                  
-                        <a href="javascript:void(0);" class="button"
+
+                    <a href="javascript:void(0);" class="button"
                         onclick="$('#modal').load('../form_popular/name_popular_image3_form.php')">
                         編輯圖片名稱 </a>
                 </article>
@@ -330,16 +330,22 @@ if (!isset($_SESSION['user'])) {
                         <img src="https://picsum.photos/200/220/?random=30" alt="explore image" class="explore__perfil"
                             id="user">
                         <span class="explore name" id="user_name">David Wu</span>
-                        <a href="../form/image_form.php?class=user" class="button" style="column-gap: 0">
+                        <!-- <a href="../form/image_form.php?class=user" class="button" style="column-gap: 0">
                             更換照片<i class="ri-arrow-right-line"></i>
-                        </a>
-                        <a href="../form_explore/name_explore_image_form.php" class="button" style="column-gap: 0">
-                            編輯名稱
+                        </a> -->
 
-                        </a>
+                        <a href="javascript:void(0);" class="button"
+                            onclick="$('#modal').load('../form_explore/image_form.php')">
+                            更換照片 </a>
+                        <div id="modal">
+
+                            <a href="../form_explore/name_explore_image_form.php" class="button" style="column-gap: 0">
+                                編輯名稱
+
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- ============join============ -->
 
@@ -388,11 +394,7 @@ if (!isset($_SESSION['user'])) {
                         the world without limits.
                     </p>
                     <a href="../form_link/edit_link_form.php" class="button" style="column-gap: 0">
-                        編輯文字敘述<i class="ri-arrow-right-line"></i>
-                    </a>
-                    <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"
-                        style="column-gap: 0">
-                        編輯連結
+                        編輯連結<i class="ri-arrow-right-line"></i>
                     </a>
                 </div>
                 <div class="footer__data grid">

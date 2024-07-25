@@ -35,7 +35,7 @@ $data = $Title->all();
                         <label class="form-label mt-2" for="description">description:</label><br>
                         <input class="form-control " type="text" name="description" id="description" value="<?=$data[0]['description']?>"><br>
                         <input  class='btn btn-primary' type="button" value="送出" onclick="send()">
-                        <input type="reset" value="重置" class='btn btn-warning'>
+
                     </form>
                 </div>
             </div>

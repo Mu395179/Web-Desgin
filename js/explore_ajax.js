@@ -63,9 +63,9 @@ $(document).ready(function () {
                          <a  href="javascript:void(0);" class="button"
         onclick="$('#modal').load('../form_explore/image_form.php')">
         更換照片 </a>
-                        <a href="../form_explore/text_form.php" class="button">
-                            更換文字敘述<i class="ri-arrow-right-line"></i>
-                        </a>
+                         <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_explore/text_form.php')">
+        編輯標題 </a>
 
     </div>
                     `;
