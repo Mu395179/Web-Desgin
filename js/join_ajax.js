@@ -60,17 +60,18 @@ $(document).ready(function () {
                     <p class="join__description">
                     ${value.description}
                     </p>
-                     <a href="../backend/manage.php" class="popular-button" style="margin-bottom: 20px; margin-right: 10px;">
+                     <a href="https://github.com/Mu395179" target="_blank" class="popular-button" style="margin-bottom: 20px; margin-right: 10px;">
                         Go to ${value.title}<i class="ri-arrow-right-line"></i>
                     </a>
                    <div style="margin-top: 30px">
-                    <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0;">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
-                    <a href="../form_join/text_form.php" class="button"
-                        style="column-gap: 0">
-                        編輯文字敘述
-                    </a>
+                  
+                    <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_join/image_form.php')">
+        更換照片 </a>
+                  
+                     <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_join/text_form.php')">
+        編輯文字</a>
                      </div>
 
     </div>
@@ -86,48 +87,7 @@ $(document).ready(function () {
         }
     });
 
-    // let getjoinimage = '../api_join/get_join_image.php';
-
-    // $.ajax({
-    //     type: "get",
-    //     url: getjoinimage,
-    //     data: "image",
-    //     dataType: "json",
-    //     success: function (image) {
-    //         // 請求成功時執行的操作
-    //         console.log('Success:', image);
-
-    //         $('#join_image1').attr('src', `../api/images/${image.image1}`);
-           
-    //     },
-    //     error: function (error) {
-    //         // 請求失敗時執行的操作
-    //         console.error('Error:', error);
-    //         console.log('value', value);
-    //     }
-    // });
-
-    // let getjoinimagename = '../api_join/get_join_image_name.php';
-
-    // $(document).ready(function() {
-    //     $.ajax({
-    //         type: "GET",
-    //         url: getjoinimagename,
-    //         dataType: "json",
-    //         success: function(imagename) {
-    //             // 请求成功时执行的操作
-    //             console.log('Success:', imagename);
-
-    //             $('#join_image1_name').text(imagename.image1);
-               
-    //         },
-    //         error: function(error) {
-    //             // 请求失败时执行的操作
-    //             console.error('Error:', error);
-    //             console.error('imagename:', imagename);
-    //         }
-    //     });
-    // });
+   
 
 
 

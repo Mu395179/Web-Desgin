@@ -339,10 +339,6 @@ if (!isset($_SESSION['user'])) {
                             更換照片 </a>
                         <div id="modal">
 
-                            <!-- <a href="../form_explore/name_explore_image_form.php" class="button" style="column-gap: 0">
-                                編輯名稱
-
-                            </a> -->
                             <a  href="javascript:void(0);" class="button"
         onclick="$('#modal').load('../form_explore/name_explore_image_form.php')">
         編輯名稱 </a>
@@ -365,21 +361,9 @@ if (!isset($_SESSION['user'])) {
                         porro, similique fugiat nam obcaecati deleniti, aliquam quos ad. Modi qui ad ipsa provident
                         libero ducimus voluptates.
                     </p>
-                    <form action="" class="join__form" style="margin-bottom: 10px; margin-right: 20px;">
-                        <button class="join_button button">
-                            Subscrible Our Newsletter <i class="ri-arrow-right-line"></i>
-                        </button>
-                    </form>
-                    <a href="../form/image_form.php?class=join" class="button" style="column-gap: 0">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
-                    <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"
-                        style="column-gap: 0">
-                        編輯照片名稱
-                    </a>
+                   
                 </div>
                 <div class="join__image">
-                    <!-- <img src="https://picsum.photos/300/200/?random=35" alt="join image" class="join__img"> -->
                     <div class="join__shadow"></div>
                 </div>
             </div>
