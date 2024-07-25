@@ -152,7 +152,7 @@ if (!isset($_SESSION['user'])) {
                         <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image2.php')">
                             更換照片 </a>
-                            <a href="javascript:void(0);" class="button"
+                        <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form/name_home_image2_form.php')">
                             編輯照片名稱 </a>
 
@@ -164,7 +164,7 @@ if (!isset($_SESSION['user'])) {
                         <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image3.php')">
                             更換照片 </a>
-                            <a href="javascript:void(0);" class="button"
+                        <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form/name_home_image3_form.php')">
                             編輯照片名稱 </a>
                     </article>
@@ -174,7 +174,7 @@ if (!isset($_SESSION['user'])) {
                         <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form_home/image_form_image4.php')">
                             更換照片 </a>
-                            <a href="javascript:void(0);" class="button"
+                        <a href="javascript:void(0);" class="button"
                             onclick="$('#modal').load('../form/name_home_image4_form.php')">
                             編輯照片名稱 </a>
 
@@ -219,9 +219,10 @@ if (!isset($_SESSION['user'])) {
                 Of the world
             </h2>
             <div class="buttonbox">
-                <a href="../form_popular/name_popular_title_form.php" class="popular-button">
-                    編輯文字敘述
-                </a>
+
+                <a  href="javascript:void(0);" class="button popular-button"
+        onclick="$('#modal').load('../form_popular/name_popular_title_form.php')">
+        更換文字敘述 </a>
             </div>
 
             <div class="popular__container container grid">
