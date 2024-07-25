@@ -32,7 +32,7 @@ $data = $Logo->all();
                         <input class="form-control" type="text" name="name" id="username" value="<?=$data[0]['name']?>"><br>
 
                         <input type="submit" class="btn btn-primary" value="送出" onclick="send()">
-                        <input type="reset" value="重置" class='btn btn-warning'>
+                      
                     </form>
                 </div>
             </div>

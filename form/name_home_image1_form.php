@@ -34,7 +34,7 @@ $image =q("SELECT * FROM `name_home_image` WHERE `type`='image1'");
                         <label class="form-label mt-2" for="name">name:</label><br>
                         <input class="form-control" type="text" name="name" id="home_name" value="<?= $image[0]['name']?>"><br>
                         <input type="button" value="送出" onclick="send()" class='btn btn-primary'>
-                        <input type="reset" value="重置" class='btn btn-warning'>
+                      
                     </form>
                 </div>
             </div>
