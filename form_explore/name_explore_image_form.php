@@ -1,3 +1,13 @@
+<?php
+
+include_once "../api/base.php";
+
+$data = $User->all();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +19,26 @@
 </head>
 
 <body>
-    <form method="post">
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">Admin User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form method="post">
         <label class="form-label mt-2" for="name">name:</label><br>
-        <input class="form-control" type="text" name="name" id="username"><br>
+        <input class="form-control" type="text" name="name" id="username"  value="<?=$data[0]['name']?>"><br>
        
-        <input type="button" value="送出" onclick="send()">
-        <input type="reset" value="重置" class='btn btn-warning'>
+        <input type="button" value="送出" onclick="send()" class='btn btn-primary'>
+
     </form>
+            </div>
+        </div>
+    </div>
+</div>
+   
 </body>
 
 <script>
@@ -36,7 +59,17 @@
             }
         })
     }
-    // jquery end
+    const userModal = new bootstrap.Modal('#userModal')
+        const modal = document.querySelector("#userModal")
+        modal.addEventListener('hidden.bs.modal', event => {
+
+            userModal.dispose()
+            $("#modal").html("")
+
+        })
+       
+        //console.log(userModal)
+        userModal.show()
 </script>
 
 </html>

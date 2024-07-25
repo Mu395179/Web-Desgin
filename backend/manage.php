@@ -339,10 +339,13 @@ if (!isset($_SESSION['user'])) {
                             更換照片 </a>
                         <div id="modal">
 
-                            <a href="../form_explore/name_explore_image_form.php" class="button" style="column-gap: 0">
+                            <!-- <a href="../form_explore/name_explore_image_form.php" class="button" style="column-gap: 0">
                                 編輯名稱
 
-                            </a>
+                            </a> -->
+                            <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_explore/name_explore_image_form.php')">
+        編輯名稱 </a>
                         </div>
                     </div>
                 </div>
