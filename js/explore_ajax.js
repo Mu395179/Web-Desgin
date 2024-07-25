@@ -61,7 +61,7 @@ $(document).ready(function () {
                              ${value.description}
                         </p>
                          <a  href="javascript:void(0);" class="button"
-        onclick="$('#modal').load('../form_explore/image_form.php')">
+        onclick="$('#modal').load('../form_explore/image_title_form.php')">
         更換照片 </a>
                          <a  href="javascript:void(0);" class="button"
         onclick="$('#modal').load('../form_explore/text_form.php')">
