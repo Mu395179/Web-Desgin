@@ -20,13 +20,14 @@ if (!isset($_SESSION['user'])) {
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
@@ -375,18 +376,24 @@ if (!isset($_SESSION['user'])) {
         <div class="footer__container container grid">
             <div class="footer__content grid">
                 <div class="">
-                    <a href="#" class="footer__logo">Travel</a>
+                    <a href="#" class="footer__logo">Thanks for watching </a>
                     <p class="footer__description">
-                        Travel with us and explore <br>
-                        the world without limits.
+                        網頁設計者:吳威儒 <br>
+                        前端設計參考:@Bedimcode <br>
+                        後端管理設計:獨立開發 <br>
+                        設計理念:可以依照使用者需求<br>
+                        不需要寫程式就能完全替換照片及編輯文字 <br>
+                        輕鬆完成自己的形象網站<br><br>
+                        開發者信箱: <a href="d128579744@gmail.com">d128579744@gmail.com</a>
                     </p>
-                    <a href="../form_link/edit_link_form.php" class="button" style="column-gap: 0">
-                        編輯連結<i class="ri-arrow-right-line"></i>
-                    </a>
+
+                    <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_link/edit_link_form.php')">
+        編輯連結</a>
                 </div>
                 <div class="footer__data grid">
                     <div>
-                        <h3 class="footer__title">About</h3>
+                        <h3 class="footer__title">SOURCE Line</h3>
                         <ul class="footer_links" id="line1">
                             <li> <a href="#" class="footer__link">About Us</a></li>
                             <li> <a href="#" class="footer__link">Features</a></li>
@@ -394,7 +401,7 @@ if (!isset($_SESSION['user'])) {
                         </ul>
                     </div>
                     <div>
-                        <h3 class="footer__title">Company</h3>
+                        <h3 class="footer__title">SOURCE Line</h3>
                         <ul class="footer_links" id="line2">
                             <li> <a href="#" class="footer__link">FAQs</a></li>
                             <li> <a href="#" class="footer__link">History</a></li>
@@ -402,41 +409,42 @@ if (!isset($_SESSION['user'])) {
                         </ul>
                     </div>
                     <div>
-                        <h3 class="footer__title">Contact</h3>
+                        <h3 class="footer__title">Contact Web Designer</h3>
                         <ul class="footer_links" id="line3">
                             <li> <a href="#" class="footer__link">Call Center</a></li>
                             <li> <a href="#" class="footer__link">Support Center</a></li>
                             <li> <a href="#" class="footer__link">Contact Us</a></li>
                         </ul>
                     </div>
-                    <!-- <div>
-                        <h3 class="footer__title">Support</h3>
+                    <div>
+                        <h3 class="footer__title">WEB DESIGN SOURCE</h3>
                         <ul class="footer_links">
-                            <li> <a href="#" class="footer__link">Privacy Policy</a></li>
-                            <li> <a href="#" class="footer__link">Terms & Services</a></li>
-                            <li> <a href="#" class="footer__link">Payments</a></li>
+                            <li> <a href="https://www.youtube.com/@Bedimcode" class="footer__link">Wed Design Channel SRC</a></li>
+                            <li> <a href="https://github.com/bedimcode/responsive-travel-website-2" class="footer__link">Wed Design Github SRC</a></li>
+                            <li> <a href="https://github.com/Remix-Design/RemixIcon" class="footer__link">Icon SRC</a></li>
+                            <li> <a href="https://www.youtube.com/watch?v=cgV2tN8gxCg&t=769s" class="footer__link">Wed Design Vedio SRC</a></li>
                         </ul>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="footer__group">
                 <div class="footer__social">
-                    <a href="" class="footer__social-link" target="_blank">
+                    <a href="https://www.facebook.com/pages/%E5%8B%9E%E5%8B%95%E9%83%A8%E5%8B%9E%E5%8B%95%E5%8A%9B%E7%99%BC%E5%B1%95%E7%BD%B2%E5%8C%97%E5%9F%BA%E5%AE%9C%E8%8A%B1%E9%87%91%E9%A6%AC%E5%88%86%E7%BD%B2-%E8%81%B7%E6%B6%AF%E7%99%BC%E5%B1%95%E4%B8%AD%E5%BF%83%E7%B1%8C%E5%82%99%E8%99%95/276576596029362?locale=zh_TW" class="footer__social-link" target="_blank">
                         <i class="ri-facebook-line"></i>
                     </a>
-                    <a href="" class="footer__social-link" target="_blank">
+                    <a href="https://www.instagram.com/wda.youthsalon/" class="footer__social-link" target="_blank">
                         <i class="ri-instagram-line"></i>
                     </a>
-                    <a href="" class="footer__social-link" target="_blank">
+                    <!-- <a href="" class="footer__social-link" target="_blank">
                         <i class="ri-twitter-line"></i>
-                    </a>
-                    <a href="" class="footer__social-link" target="_blank">
+                    </a> -->
+                    <a href="https://www.youtube.com/@user-kn2gz6lx1f" class="footer__social-link" target="_blank">
                         <i class="ri-youtube-line"></i>
                     </a>
                 </div>
 
                 <span class="footer__copy">
-                    &#169; Copyright Bedimcode. All rights reserved
+                   前端設計參考來源: &#169; Copyright Bedimcode. All rights reserved
                 </span>
             </div>
     </footer>

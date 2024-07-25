@@ -31,13 +31,12 @@ $link =
         }
 
         .title {
-            height: 50px;
+padding-bottom: 10px;
             text-align: center;
-            font-size: larger;
+            font-size: large;
+
             /* border: 1px solid black; */
             /* display: inline-block; */
-            margin: 0;
-
         }
 
         .item {
@@ -50,7 +49,8 @@ $link =
 
         .name {
             width: 100px;
-
+            margin-left: 10px;
+            text-align: center;
         }
 
         .source {
@@ -59,7 +59,9 @@ $link =
         }
 
         .type {
-            width: 50px;
+            width: 55px;
+            margin-left: 10px;
+            text-align: center;
 
         }
 
@@ -69,53 +71,78 @@ $link =
 
 
         }
+
+        input {
+            border: 1px solid black;
+            color: black;
+            overflow: hidden;
+        }
     </style>
 
 
 </head>
 
 <body>
-    <div class="container">
-        <h1>Link 編輯</h1>
-        <div class="row">
-            <div class="name title">name</div>
-            <div class="source title">source</div>
-            <div class="type title">type</div>
-        </div>
+    <div class="modal fade" id="listModal" tabindex="-1" aria-labelledby="listModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="listModalLabel">Admin List</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-2 title">name</div>
+                        <div class="col-3 title" style="margin-left: 100px;">source</div>
+                        <div class="col-4 title" style="margin-left: 55px;">type</div>
 
-        <?php foreach ($link as $value) { ?>
-            <div class="row mb-2">
-                <form method="post" class="d-flex needs-validation" novalidate>
-                    <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>" value="<?= $value['id']; ?>" required>
-                    <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>" value="<?= $value['name']; ?>" required>
-                    <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>" value="<?= $value['source']; ?>" required>
-                    <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>" value="<?= $value['type']; ?>" required>
+                    </div>
 
-                    <input class="btn btn-success mx-2" type="button" value="編輯" onclick="send(<?= $value['id']; ?>)">
-                    <input class="btn btn-danger mx-1" type="button" value="刪除" onclick="del(<?= $value['id']; ?>)">
-                </form>
+                    <?php foreach ($link as $value) { ?>
+                        <div class="row mb-2">
+                            <form method="post" class="d-flex needs-validation" novalidate>
+                                <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>"
+                                    value="<?= $value['id']; ?>" required>
+                                <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>"
+                                    value="<?= $value['name']; ?>" required>
+                                <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>"
+                                    value="<?= $value['source']; ?>" required>
+                                <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>"
+                                    value="<?= $value['type']; ?>" required>
+
+                                <input class="btn btn-success mx-2" type="button" value="編輯"
+                                    onclick="send(<?= $value['id']; ?>)">
+                                <input class="btn btn-danger mx-1" type="button" value="刪除"
+                                    onclick="del(<?= $value['id']; ?>)">
+                            </form>
+                        </div>
+                    <?php } ?>
+                    <div class="row mt-5">
+                        <div class="name title">name</div>
+                        <div class="source title">source</div>
+                        <div class="type title">type</div>
+                    </div>
+                    <div class="row mt-2">
+                        <form method="post" class="d-flex needs-validation" novalidate>
+                            <input class="name item" type="text" name="name" id="name-new">
+                            <input class="source item" type="text" name="source" id="source-new">
+                            <input class="type item" type="text" name="type" id="type-new">
+
+                            <input class="btn btn-primary mx-2" type="button" value="新增" onclick="save()">
+
+                        </form>
+                    </div>
+
+                    <div class="row">
+                        <a href="../backend/manage.php"><button class="btn btn-dark mt-5">返回管理頁</button></a>
+                    </div>
+                </div>
             </div>
-        <?php } ?>
-        <div class="row mt-5">
-            <div class="name title">name</div>
-            <div class="source title">source</div>
-            <div class="type title">type</div>
-        </div>
-        <div class="row mt-2">
-                <form method="post" class="d-flex needs-validation" novalidate>
-                    <input class="name item" type="text" name="name" id="name-new" >
-                    <input class="source item" type="text" name="source" id="source-new" >
-                    <input class="type item" type="text" name="type" id="type-new" >
-
-                    <input class="btn btn-primary mx-2" type="button" value="新增" onclick="save()">
-
-                </form>
-            </div>
-
-        <div class="row">
-            <a href="../backend/manage.php"><button class="btn btn-dark mt-5">返回管理頁</button></a>
         </div>
     </div>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         function send(id) {
@@ -146,7 +173,7 @@ $link =
             $.post("../api_link/delete_link.php", form, function (res) {
                 if (res == 1) {
                     alert('刪除成功');
-                    location.reload();  // 刪除成功後重新加載頁面
+                    // location.reload();  // 刪除成功後重新加載頁面
                 } else {
                     alert('刪除失敗');
                     console.log(res);
@@ -173,6 +200,17 @@ $link =
                 }
             });
         }
+        const listModal = new bootstrap.Modal('#listModal')
+        const modal = document.querySelector("#listModal")
+        modal.addEventListener('hidden.bs.modal', event => {
+
+            listModal.dispose()
+            $("#modal").html("")
+
+        })
+
+        //console.log(listModal)
+        listModal.show()
     </script>
 </body>
 
