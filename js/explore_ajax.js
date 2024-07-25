@@ -60,9 +60,9 @@ $(document).ready(function () {
                         <p class="explore__description">
                              ${value.description}
                         </p>
-                        <a href="../form/image_form.php?class=explore_title" class="button">
-                            更換照片<i class="ri-arrow-right-line"></i>
-                        </a>
+                         <a  href="javascript:void(0);" class="button"
+        onclick="$('#modal').load('../form_explore/image_form.php')">
+        更換照片 </a>
                         <a href="../form_explore/text_form.php" class="button">
                             更換文字敘述<i class="ri-arrow-right-line"></i>
                         </a>
