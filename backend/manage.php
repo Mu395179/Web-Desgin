@@ -220,9 +220,9 @@ if (!isset($_SESSION['user'])) {
             </h2>
             <div class="buttonbox">
 
-                <a  href="javascript:void(0);" class="button popular-button"
-        onclick="$('#modal').load('../form_popular/name_popular_title_form.php')">
-        更換文字敘述 </a>
+                <a href="javascript:void(0);" class="button popular-button"
+                    onclick="$('#modal').load('../form_popular/name_popular_title_form.php')">
+                    更換文字敘述 </a>
             </div>
 
             <div class="popular__container container grid">
@@ -273,9 +273,10 @@ if (!isset($_SESSION['user'])) {
             </div>
             <div class="popular__container container grid">
                 <article class="popular__card">
-                    <a href="../form/image_form.php?class=popular_image1" class="button" style="column-gap: 0">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
+
+                    <a href="javascript:void(0);" class="button"
+                        onclick="$('#modal').load('../form_popular/image_form_image1.php')">
+                        更換圖片 </a>
                     <a href="../form_popular/name_popular_image_form.php?type=image1" class="button"
                         style="column-gap: 0">
                         編輯照片名稱
@@ -283,9 +284,9 @@ if (!isset($_SESSION['user'])) {
                 </article>
 
                 <article class="popular__card">
-                    <a href="../form/image_form.php?class=popular_image2" class="button" style="column-gap: 0">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
+                <a href="javascript:void(0);" class="button"
+                        onclick="$('#modal').load('../form_popular/image_form_image2.php')">
+                        更換圖片 </a>
                     <a href="../form_popular/name_popular_image_form.php?type=image2" class="button"
                         style="column-gap: 0">
                         編輯照片名稱
@@ -293,9 +294,9 @@ if (!isset($_SESSION['user'])) {
                 </article>
 
                 <article class="popular__card">
-                    <a href="../form/image_form.php?class=popular_image3" class="button" style="column-gap: 0">
-                        更換照片<i class="ri-arrow-right-line"></i>
-                    </a>
+                <a href="javascript:void(0);" class="button"
+                        onclick="$('#modal').load('../form_popular/image_form_image3.php')">
+                        更換圖片 </a>
                     <a href="../form_popular/name_popular_image_form.php?type=image3" class="button"
                         style="column-gap: 0">
                         編輯照片名稱
