@@ -31,7 +31,7 @@ $link =
         }
 
         .title {
-padding-bottom: 10px;
+            padding-bottom: 10px;
             text-align: center;
             font-size: large;
 
@@ -100,21 +100,14 @@ padding-bottom: 10px;
 
                     <?php foreach ($link as $value) { ?>
                         <div class="row mb-2">
-                            <form method="post" class="d-flex needs-validation" novalidate>
-                                <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>"
-                                    value="<?= $value['id']; ?>" required>
-                                <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>"
-                                    value="<?= $value['name']; ?>" required>
-                                <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>"
-                                    value="<?= $value['source']; ?>" required>
-                                <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>"
-                                    value="<?= $value['type']; ?>" required>
-
-                                <input class="btn btn-success mx-2" type="button" value="編輯"
-                                    onclick="send(<?= $value['id']; ?>)">
-                                <input class="btn btn-danger mx-1" type="button" value="刪除"
-                                    onclick="del(<?= $value['id']; ?>)">
-                            </form>
+                        <form method="post" action="../api_link/api_link.php" class="d-flex needs-validation">
+    <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>" value="<?= $value['id']; ?>" required>
+    <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>" value="<?= $value['name']; ?>" required>
+    <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>" value="<?= $value['source']; ?>" required>
+    <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>" value="<?= $value['type']; ?>" required>
+    <input class="btn btn-success mx-2" type="submit" name="action" value="編輯">
+    <input class="btn btn-danger mx-1" type="submit" name="action" value="刪除">
+</form>
                         </div>
                     <?php } ?>
                     <div class="row mt-5">
@@ -123,12 +116,12 @@ padding-bottom: 10px;
                         <div class="type title">type</div>
                     </div>
                     <div class="row mt-2">
-                        <form method="post" class="d-flex needs-validation" novalidate>
+                        <form method="post" class="d-flex needs-validation" action="../api_link/api_link.php">
                             <input class="name item" type="text" name="name" id="name-new">
                             <input class="source item" type="text" name="source" id="source-new">
                             <input class="type item" type="text" name="type" id="type-new">
 
-                            <input class="btn btn-primary mx-2" type="button" value="新增" onclick="save()">
+                            <input class="btn btn-success mx-2" type="submit" name="action" value="新增">
 
                         </form>
                     </div>
@@ -145,61 +138,7 @@ padding-bottom: 10px;
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        function send(id) {
-            // 因為#id 是唯一，所以foreach的資料需要增加後墜，所以就把$value['id']都加在id後面
-            // 這樣foreach 出來的屬性都是唯一值
-            let form = {
-                id: $("#id-" + id).val(),
-                name: $("#name-" + id).val(),
-                source: $("#source-" + id).val(),
-                type: $("#type-" + id).val(),
-            };
-            $.post("../api_link/edit_link.php", form, function (res) {
-                console.log('form', form);
-                if (res == 1) {
-                    alert('更新成功');
-                    location.reload();
-                } else {
-                    alert('更新失敗');
-                    console.log(res);
-                }
-            });
-        }
 
-        function del(id) {
-            let form = {
-                id: $("#id-" + id).val(),
-            };
-            $.post("../api_link/delete_link.php", form, function (res) {
-                if (res == 1) {
-                    alert('刪除成功');
-                    // location.reload();  // 刪除成功後重新加載頁面
-                } else {
-                    alert('刪除失敗');
-                    console.log(res);
-                }
-            });
-        }
-
-        function save() {
-            // 因為#id 是唯一，所以foreach的資料需要增加後墜，所以就把$value['id']都加在id後面
-            // 這樣foreach 出來的屬性都是唯一值
-            let form = {
-                name: $("#name-new").val(),
-                source: $("#source-new").val(),
-                type: $("#type-new").val(),
-            };
-            $.post("../api_link/create_link.php", form, function (res) {
-                console.log('form', form);
-                if (res == 1) {
-                    alert('新增成功');
-                    location.reload();
-                } else {
-                    alert('新增失敗');
-                    console.log(res);
-                }
-            });
-        }
         const listModal = new bootstrap.Modal('#listModal')
         const modal = document.querySelector("#listModal")
         modal.addEventListener('hidden.bs.modal', event => {
