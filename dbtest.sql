@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-07-25 10:22:10
+-- 產生時間： 2024-07-27 03:37:53
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -59,18 +59,18 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `name`, `type`, `size`, `class`) VALUES
-(122, '20240724164724.jpg', 'image/jpeg', '76466', 'image1'),
-(124, '20240724164739.jpg', 'image/jpeg', '52363', 'image3'),
-(125, '20240724164747.jpg', 'image/jpeg', '31350', 'image4'),
-(127, '20240724173557.jpg', 'image/jpeg', '1030057', 'about'),
-(128, '20240725023022.jpg', 'image/jpeg', '239166', 'title'),
-(129, '20240725023242.jpg', 'image/jpeg', '46139', 'image2'),
-(131, '20240725031656.jpg', 'image/jpeg', '575073', 'popular_image2'),
-(132, '20240725031706.jpg', 'image/jpeg', '623537', 'popular_image1'),
-(133, '20240725031714.jpg', 'image/jpeg', '643579', 'popular_image3'),
-(134, '20240725034620.jpg', 'image/jpeg', '361055', 'explore_title'),
-(135, '20240725040950.jpg', 'image/jpeg', '136781', 'user'),
-(136, '20240725075811.jpg', 'image/jpeg', '628251', 'join');
+(141, '20240725123042.jpg', 'image/jpeg', '609055', 'image1'),
+(142, '20240725123108.jpg', 'image/jpeg', '685602', 'image2'),
+(143, '20240725123159.jpg', 'image/jpeg', '374049', 'image3'),
+(144, '20240725123225.jpg', 'image/jpeg', '528313', 'image4'),
+(145, '20240725123256.jpg', 'image/jpeg', '700137', 'about'),
+(146, '20240725123500.jpg', 'image/jpeg', '636166', 'popular_image1'),
+(148, '20240725123519.jpg', 'image/jpeg', '707724', 'popular_image3'),
+(149, '20240725123530.jpg', 'image/jpeg', '569127', 'popular_image2'),
+(152, '20240725123944.jpg', 'image/jpeg', '800791', 'join'),
+(157, '20240725124911.jpg', 'image/jpeg', '815202', 'user'),
+(158, '20240725124921.jpg', 'image/jpeg', '517166', 'explore_title'),
+(159, '20240725124933.jpg', 'image/jpeg', '524215', 'title');
 
 -- --------------------------------------------------------
 
@@ -119,7 +119,7 @@ CREATE TABLE `logo` (
 --
 
 INSERT INTO `logo` (`id`, `name`) VALUES
-(10, 'HOLOLIVE EN');
+(11, 'RONG ART');
 
 -- --------------------------------------------------------
 
@@ -138,10 +138,10 @@ CREATE TABLE `name_home_image` (
 --
 
 INSERT INTO `name_home_image` (`id`, `name`, `type`) VALUES
-(48, 'Hakos Baelz', 'image1'),
-(53, 'IryS', 'image3'),
-(54, 'Ceres Fauna', 'image4'),
-(55, 'Nanashi Mumei', 'image2');
+(56, 'THE CAT', 'image1'),
+(57, 'Smail doggie', 'image2'),
+(58, 'CHI CHI', 'image3'),
+(59, 'THIS CAT', 'image4');
 
 -- --------------------------------------------------------
 
@@ -161,9 +161,9 @@ CREATE TABLE `name_popular_image` (
 --
 
 INSERT INTO `name_popular_image` (`id`, `name`, `text`, `type`) VALUES
-(17, 'Hakos Baelz', 'Admiral', 'image1'),
-(18, 'Ceres Fauna', ' Assassin', 'image2'),
-(19, 'Takanashi Kiara', 'Air Chief', 'image3');
+(20, 'Impressionnisme', 'Alishan', 'image1'),
+(22, 'Impressionnisme', 'falls Park', 'image2'),
+(23, 'Impressionnisme', 'stream of early morning', 'image3');
 
 -- --------------------------------------------------------
 
@@ -183,7 +183,7 @@ CREATE TABLE `text_about` (
 --
 
 INSERT INTO `text_about` (`id`, `subtitle`, `title`, `description`) VALUES
-(11, 'HOLO CHAD ', 'HOLOLIVE CHAT PODCAST ', 'Hakos Baelz& IRyS & Mori Calliope  GIRLS TALKING ');
+(12, 'Forest and  Raindeer', 'SNOWLIY FOREST', 'SOLD OUT');
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,7 @@ CREATE TABLE `titles` (
 --
 
 INSERT INTO `titles` (`id`, `subtitle`, `title`, `description`) VALUES
-(40, 'HOLOLIVE', 'HOLOLIVE EN', 'HOLOLIVE Myth Ame & Sama');
+(41, '興趣使燃的畫家', '不RONG於水', '油然而生');
 
 -- --------------------------------------------------------
 
@@ -222,7 +222,7 @@ CREATE TABLE `title_explore` (
 --
 
 INSERT INTO `title_explore` (`id`, `title`, `description`) VALUES
-(4, 'Ame', 'Ame Adventure');
+(5, 'Rong Art', ' Straight your Soul');
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,7 @@ CREATE TABLE `title_popular` (
 --
 
 INSERT INTO `title_popular` (`id`, `title`) VALUES
-(8, 'Ame Universe');
+(9, 'RONG ARTIST');
 
 -- --------------------------------------------------------
 
@@ -277,7 +277,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`) VALUES
-(10, 'Gigi Murin');
+(12, 'Mong Rong');
 
 --
 -- 已傾印資料表的索引
@@ -369,7 +369,7 @@ ALTER TABLE `admin`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `links`
@@ -381,37 +381,37 @@ ALTER TABLE `links`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `logo`
 --
 ALTER TABLE `logo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `name_home_image`
 --
 ALTER TABLE `name_home_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `name_popular_image`
 --
 ALTER TABLE `name_popular_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `text_about`
 --
 ALTER TABLE `text_about`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `titles`
 --
 ALTER TABLE `titles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `title_explore`
 --
 ALTER TABLE `title_explore`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `title_join`
@@ -423,13 +423,13 @@ ALTER TABLE `title_join`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `title_popular`
 --
 ALTER TABLE `title_popular`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
