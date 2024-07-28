@@ -68,6 +68,7 @@ class DB
         }
 
         return $this->pdo->exec($sql);
+        // echo $sql;
     }
 
     public function del($arg)

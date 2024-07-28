@@ -9,13 +9,13 @@ $_SESSION['password'] = "1234";
 class DB
 {
     protected $table;
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=s1130102";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=dbtest";
     protected $pdo;
 
     public function __construct($table)
     {
         $this->table = $table;
-        $this->pdo = new PDO($this->dsn, 's1130102', 's1130102');
+        $this->pdo = new PDO($this->dsn, 'root', '');
     }
 
     public function all(...$arg)
@@ -67,8 +67,8 @@ class DB
                    values('" . join("','", $arg) . "')";
         }
 
-        return $this->pdo->exec($sql);
-        // echo $sql;
+        // return $this->pdo->exec($sql);
+        echo $sql;
     }
 
     public function del($arg)
@@ -121,8 +121,8 @@ class DB
 
 function q($sql)
 {
-    $dsn = "mysql:host=localhost;charset=utf8;dbname=s1130102";
-    $pdo = new PDO($dsn, 's1130102', 's1130102');
+    $dsn = "mysql:host=localhost;charset=utf8;dbname=dbtest";
+    $pdo = new PDO($dsn, 'root', '');
     return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
 

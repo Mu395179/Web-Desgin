@@ -1,0 +1,27 @@
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Admin Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const imageModal = new bootstrap.Modal('#imageModal')
+        const modal = document.querySelector("#imageModal")
+        modal.addEventListener('hidden.bs.modal', event => {
+
+            imageModal.dispose()
+            $("#modal").html("")
+
+        })
+       
+        //console.log(imageModal)
+        imageModal.show()
+    </script>
