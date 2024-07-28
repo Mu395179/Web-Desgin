@@ -14,6 +14,32 @@
 
 ---
 
+## 系統畫面截圖
+
+### 首頁
+![首頁](./ScreenShot/images/index.jpg)
+
+### 管理頁面
+![管理頁面](./ScreenShot/images/admin_page.jpg)
+
+### 登入畫面
+![登入畫面](./ScreenShot/images/login.jpg)
+
+### 檔案上傳畫面
+![檔案上傳畫面](./ScreenShot/images/updatefile.jpg)
+
+### 文字上傳畫面
+![文字上傳畫面](./ScreenShot/images/updatetext.jpg)
+
+### Link 管理畫面
+![link管理畫面](./ScreenShot/images/link_admin.jpg)
+
+### 資料庫畫面
+![資料庫畫面](./ScreenShot/images/mysql.jpg)
+
+---
+
+
 ## Features
 
 - **簡易圖片上傳:** 使用者可以輕鬆上傳及管理圖片。
