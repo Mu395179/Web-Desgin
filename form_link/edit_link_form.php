@@ -109,8 +109,8 @@ $link =
                                     value="<?= $value['source']; ?>" required>
                                 <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>"
                                     value="<?= $value['type']; ?>" required>
-                                <input class="btn btn-success mx-2" type="submit" name="action" value="編輯">
-                                <input class="btn btn-danger mx-1" type="submit" name="action" value="刪除">
+                                <input class="btn btn-success mx-2" type="submit" name="action" value="edit">
+                                <input class="btn btn-danger mx-1" type="submit" name="action" value="delete">
                             </form>
                         </div>
                     <?php } ?>
@@ -125,7 +125,7 @@ $link =
                             <input class="source item" type="text" name="source" id="source-new">
                             <input class="type item" type="text" name="type" id="type-new">
 
-                            <input class="btn btn-success mx-2" type="submit" name="action" value="新增">
+                            <input class="btn btn-success mx-2" type="submit" name="action" value="create">
 
                         </form>
                     </div>
@@ -154,10 +154,9 @@ $link =
 
         // //console.log(listModal)
         // listModal.show()
-        // edit啟用
-      function showModal() {
+        function showModal() {
             // 獲取模態框元素
-            const modalElement = document.querySelector("#addModal");
+            const modalElement = document.querySelector("#listModal");
 
             // 創建新的模態框實例
             const addModal = new bootstrap.Modal(modalElement);
