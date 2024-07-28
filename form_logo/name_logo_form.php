@@ -40,17 +40,36 @@ $data = $Logo->all();
     </div>
 
     <script>
-        const logoModal = new bootstrap.Modal('#logoModal')
-        const modal = document.querySelector("#logoModal")
-        modal.addEventListener('hidden.bs.modal', event => {
+        // const logoModal = new bootstrap.Modal('#logoModal')
+        // const modal = document.querySelector("#logoModal")
+        // modal.addEventListener('hidden.bs.modal', event => {
 
-            logoModal.dispose()
-            $("#modal").html("")
+        //     logoModal.dispose()
+        //     $("#modal").html("")
 
-        })
+        // })
 
-        //console.log(logoModal)
-        logoModal.show()
+        // //console.log(logoModal)
+        // logoModal.show()
+        function showModal() {
+            // 獲取模態框元素
+            const modalElement = document.querySelector("#logoModal");
+
+            // 創建新的模態框實例
+            const addModal = new bootstrap.Modal(modalElement);
+
+            // 添加模態框關閉事件監聽器
+            modalElement.addEventListener('hidden.bs.modal', event => {
+                // 清空模態框內容
+                $("#modal").html("");
+            }, { once: true }); // 使用 { once: true } 確保事件監聽器僅運行一次
+
+            // 顯示模態框
+            addModal.show();
+        }
+
+        // 調用 showModal 函數顯示模態框
+        showModal();
     </script>
 
 </body>

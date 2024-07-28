@@ -64,17 +64,36 @@ $image = q("SELECT * FROM `name_popular_image` WHERE `type`='image3'");
             }
         })
     }
-    const nameModal = new bootstrap.Modal('#nameModal')
-        const modal = document.querySelector("#nameModal")
-        modal.addEventListener('hidden.bs.modal', event => {
+    // const nameModal = new bootstrap.Modal('#nameModal')
+    //     const modal = document.querySelector("#nameModal")
+    //     modal.addEventListener('hidden.bs.modal', event => {
 
-            nameModal.dispose()
-            $("#modal").html("")
+    //         nameModal.dispose()
+    //         $("#modal").html("")
 
-        })
+    //     })
        
-        //console.log(nameModal)
-        nameModal.show()
+    //     //console.log(nameModal)
+    //     nameModal.show()
+    function showModal() {
+            // 獲取模態框元素
+            const modalElement = document.querySelector("#nameModal");
+
+            // 創建新的模態框實例
+            const addModal = new bootstrap.Modal(modalElement);
+
+            // 添加模態框關閉事件監聽器
+            modalElement.addEventListener('hidden.bs.modal', event => {
+                // 清空模態框內容
+                $("#modal").html("");
+            }, { once: true }); // 使用 { once: true } 確保事件監聽器僅運行一次
+
+            // 顯示模態框
+            addModal.show();
+        }
+
+        // 調用 showModal 函數顯示模態框
+        showModal();
 </script>
 
 </html>

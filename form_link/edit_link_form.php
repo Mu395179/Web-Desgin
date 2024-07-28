@@ -100,14 +100,18 @@ $link =
 
                     <?php foreach ($link as $value) { ?>
                         <div class="row mb-2">
-                        <form method="post" action="../api_link/api_link.php" class="d-flex needs-validation">
-    <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>" value="<?= $value['id']; ?>" required>
-    <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>" value="<?= $value['name']; ?>" required>
-    <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>" value="<?= $value['source']; ?>" required>
-    <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>" value="<?= $value['type']; ?>" required>
-    <input class="btn btn-success mx-2" type="submit" name="action" value="編輯">
-    <input class="btn btn-danger mx-1" type="submit" name="action" value="刪除">
-</form>
+                            <form method="post" action="../api_link/api_link.php" class="d-flex needs-validation">
+                                <input hidden="hidden" type="text" name="id" id="id-<?= $value['id']; ?>"
+                                    value="<?= $value['id']; ?>" required>
+                                <input class="name item" type="text" name="name" id="name-<?= $value['id']; ?>"
+                                    value="<?= $value['name']; ?>" required>
+                                <input class="source item" type="text" name="source" id="source-<?= $value['id']; ?>"
+                                    value="<?= $value['source']; ?>" required>
+                                <input class="type item" type="text" name="type" id="type-<?= $value['id']; ?>"
+                                    value="<?= $value['type']; ?>" required>
+                                <input class="btn btn-success mx-2" type="submit" name="action" value="編輯">
+                                <input class="btn btn-danger mx-1" type="submit" name="action" value="刪除">
+                            </form>
                         </div>
                     <?php } ?>
                     <div class="row mt-5">
@@ -139,17 +143,37 @@ $link =
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
 
-        const listModal = new bootstrap.Modal('#listModal')
-        const modal = document.querySelector("#listModal")
-        modal.addEventListener('hidden.bs.modal', event => {
+        // const listModal = new bootstrap.Modal('#listModal')
+        // const modal = document.querySelector("#listModal")
+        // modal.addEventListener('hidden.bs.modal', event => {
 
-            listModal.dispose()
-            $("#modal").html("")
+        //     listModal.dispose()
+        //     $("#modal").html("")
 
-        })
+        // })
 
-        //console.log(listModal)
-        listModal.show()
+        // //console.log(listModal)
+        // listModal.show()
+        // edit啟用
+      function showModal() {
+            // 獲取模態框元素
+            const modalElement = document.querySelector("#addModal");
+
+            // 創建新的模態框實例
+            const addModal = new bootstrap.Modal(modalElement);
+
+            // 添加模態框關閉事件監聽器
+            modalElement.addEventListener('hidden.bs.modal', event => {
+                // 清空模態框內容
+                $("#modal").html("");
+            }, { once: true }); // 使用 { once: true } 確保事件監聽器僅運行一次
+
+            // 顯示模態框
+            addModal.show();
+        }
+
+        // 調用 showModal 函數顯示模態框
+        showModal();
     </script>
 </body>
 
