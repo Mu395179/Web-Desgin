@@ -18,12 +18,12 @@
 
 - **簡易圖片上傳:** 使用者可以輕鬆上傳及管理圖片。
 - **自定義編輯:** 不需編寫程式碼即可替換照片及編輯文字內容。
-- **藝術畫廊管理:** 專為藝術作品展示而設計的管理介面。
+- **自由定義形象網站管理:** 專為各式作品展示而設計的管理介面。
 
 ``
 ## 實際上機網址
 
-[https://wda.mackliu.com/s1130102/web_desgin/form_login/logout.php](https://wda.mackliu.com/s1130102/web_desgin/form_login/logout.php)
+[https://wda.mackliu.com/s1130102/web_desgin](https://wda.mackliu.com/s1130102/web_desgin)
 
 
 ## 聯絡信息
